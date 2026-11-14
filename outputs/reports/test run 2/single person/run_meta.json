@@ -1,0 +1,40 @@
+{
+  "run": "test run 2/single person",
+  "timestamp": "2026-11-14T16:07:08",
+  "command": "scripts/probe_batch.py --num-poses 1 --primary-only --run test run 2/single person",
+  "git_commit": "43f5d63",
+  "config": {
+    "model": "full",
+    "num_poses": 1,
+    "width": 0,
+    "stride": 1,
+    "max_frames": 0,
+    "det_conf": 0.5,
+    "track_conf": 0.5,
+    "yolo_conf": 0.35,
+    "iou": 0.3,
+    "use_yolo": true,
+    "write_video": true,
+    "run": "test run 2/single person",
+    "primary_only": true
+  },
+  "clips": [
+    "Meet_Crowd.mpg",
+    "Walk1.mpg",
+    "Workers walking in hallway of office.mp4"
+  ],
+  "python": "3.11.14",
+  "platform": "Windows 10",
+  "versions": {
+    "mediapipe": "1.2.3",
+    "ultralytics": "8.4.212",
+    "opencv": "5.0.0",
+    "numpy": "2.4.6"
+  },
+  "code_snapshot": [
+    "src/skelguard/probe.py",
+    "src/skelguard/paths.py",
+    "scripts/probe_batch.py",
+    "scripts/probe_pose.py"
+  ]
+}

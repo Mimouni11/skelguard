@@ -1,0 +1,45 @@
+{
+  "run": "test run 2/crop",
+  "timestamp": "2026-11-14T16:20:18",
+  "command": "scripts/probe_batch.py --crop --run test run 2/crop",
+  "git_commit": "43f5d63",
+  "config": {
+    "model": "full",
+    "num_poses": 5,
+    "width": 0,
+    "stride": 1,
+    "max_frames": 0,
+    "det_conf": 0.5,
+    "track_conf": 0.5,
+    "yolo_conf": 0.35,
+    "iou": 0.3,
+    "use_yolo": true,
+    "write_video": true,
+    "run": "test run 2/crop",
+    "primary_only": false,
+    "crop": true,
+    "crop_margin": 0.2,
+    "crop_target_h": 320,
+    "crop_max_scale": 8.0
+  },
+  "clips": [
+    "Meet_Crowd.mpg",
+    "Walk1.mpg",
+    "Workers walking in hallway of office.mp4"
+  ],
+  "python": "3.11.14",
+  "platform": "Windows 10",
+  "versions": {
+    "mediapipe": "1.2.3",
+    "ultralytics": "8.4.212",
+    "opencv": "5.0.0",
+    "numpy": "2.4.6",
+    "torch": "2.15.0+cpu"
+  },
+  "code_snapshot": [
+    "src/skelguard/probe.py",
+    "src/skelguard/paths.py",
+    "scripts/probe_batch.py",
+    "scripts/probe_pose.py"
+  ]
+}
