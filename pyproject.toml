@@ -1,0 +1,59 @@
+[project]
+name = "skelguard"
+version = "0.1.0"
+description = "Privacy-preserving passive surveillance of restricted zones, from skeletons only (Projet 2)"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    # --- perception (WP1) ---
+    "mediapipe>=0.10.14",        # PoseLandmarker (multi-pose) + ObjectDetector
+    "opencv-python>=4.9",
+    "ultralytics>=8.3",          # YOLOv8 + ByteTrack, fallback path only
+
+    # --- numerics / data ---
+    "numpy>=1.26",
+    "scipy>=1.11",               # linear_sum_assignment -> Hungarian tracker (WP1)
+    "pandas>=2.1",
+    "pyarrow>=15",               # parquet skeleton store
+
+    # --- models (WP5) ---
+    "torch>=2.9",
+    "torchvision>=0.24",         # required by ultralytics; keep on the same index as torch
+    "scikit-learn>=1.4",         # metrics, confusion matrices, grouped splits
+
+    # --- outputs (WP6) ---
+    "matplotlib>=3.8",
+
+    # --- misc ---
+    "tqdm>=4.66",
+    "pyyaml>=6.0",
+    "requests>=2.31",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.5", "ipykernel>=6.29"]
+
+# PyTorch, CPU build (~250 MB instead of ~2.5 GB).
+# MediaPipe's Python build is CPU-only anyway, and the MLP/LSTM are tiny, so the GPU
+# would only serve the YOLOv8 fallback. To switch to GPU later (RTX 2050 = Ampere sm_86,
+# driver 617.42 / CUDA 13.4, no local CUDA toolkit needed - the wheel bundles its own):
+#   change the url below to  https://download.pytorch.org/whl/cu128  then run  uv sync
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["uv_build>=0.10.0,<0.11.0"]
+build-backend = "uv_build"

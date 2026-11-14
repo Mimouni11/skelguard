@@ -1,0 +1,48 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.ruff_cache/
+
+# ---- Data: never commit video or datasets ----
+data/raw/**
+data/datasets/**
+data/interim/**
+data/skeletons/**
+!data/**/.gitkeep
+!data/**/README.md
+
+# Labels and clip scripts ARE committed (small, they are ground truth)
+!data/labels/**
+
+# ---- Models ----
+models/mediapipe/*.task
+models/mediapipe/*.tflite
+models/trained/*.pt
+models/trained/*.pth
+models/trained/*.onnx
+*.engine
+yolov8*.pt
+
+# ---- Outputs: regenerable ----
+outputs/videos/**
+outputs/logs/**
+outputs/figures/**
+!outputs/**/.gitkeep
+
+# Keep final metric tables and the report
+!outputs/reports/**
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# ---- Secrets ----
+.env
+*.local
