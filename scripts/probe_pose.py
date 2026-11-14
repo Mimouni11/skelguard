@@ -84,6 +84,14 @@ def report(res, stats) -> None:
           f"  detected " + (f"{r:6.1%}" if r == r else "   n/a"))
     print(f"    crossing occurs in {stats['crossing_frame_rate']:.1%} of frames")
 
+    print("\n[2b] CONTINUITY (does a detection hold long enough to be usable?)")
+    print(f"    frames with a detection  {stats.get('frames_detected_rate', 0):.1%}")
+    print(f"    on/off flips             {stats.get('flips_per_s', 0):.1f} per second")
+    print(f"    longest unbroken run     {stats.get('run_max', 0)} frames "
+          f"({stats.get('run_max_s', 0):.1f}s), median {stats.get('run_median', 0):.0f}")
+    print(f"    frames in runs >= 30     {stats.get('usable_window_rate', 0):.1%}"
+          f"  -> {stats.get('n_windows', 0)} window(s) for WP5")
+
     events = drop_events(res.frames)
     if events:
         print(f"\n    {len(events)} drop event(s) - scrub to these in the annotated video:")
@@ -91,7 +99,7 @@ def report(res, stats) -> None:
             print(f"      {start:6.1f}s -> {end:6.1f}s  ({end - start:5.1f}s, {nf:4d} frames, "
                   f"up to {worst} person(s) missed)")
 
-    verdict, why = decide(stats["miss_rate"], fps)
+    verdict, why = decide(stats["miss_rate"], fps, stats.get("mode", "full"))
     print("\n" + "-" * 70)
     print(f"DECISION (rule fixed before the numbers): {verdict}")
     print(f"    {why}")
@@ -164,6 +172,13 @@ def main() -> int:
     ap.add_argument("--iou", type=float, default=0.30, help="IoU to call a pose a match")
     ap.add_argument("--no-yolo", action="store_true", help="skip the reference (counts only)")
     ap.add_argument("--no-video", action="store_true", help="skip the annotated mp4")
+    ap.add_argument("--primary-only", action="store_true",
+                    help="score against the largest person only; use with --num-poses 1")
+    ap.add_argument("--crop", action="store_true",
+                    help="YOLO box -> upscale -> MediaPipe single-pose on the crop")
+    ap.add_argument("--crop-margin", type=float, default=0.20)
+    ap.add_argument("--crop-target-h", type=int, default=320)
+    ap.add_argument("--crop-max-scale", type=float, default=8.0)
     ap.add_argument("--run", default="test run 1",
                     help="name of this run; outputs go to outputs/<kind>/<run>/")
     ap.add_argument("--sweep", action="store_true", help="fps only, across models and widths")
@@ -179,6 +194,9 @@ def main() -> int:
         max_frames=args.max_frames, det_conf=args.det_conf, track_conf=args.track_conf,
         yolo_conf=args.yolo_conf, iou=args.iou,
         use_yolo=not args.no_yolo, write_video=not args.no_video, run=args.run,
+        primary_only=args.primary_only,
+        crop=args.crop, crop_margin=args.crop_margin,
+        crop_target_h=args.crop_target_h, crop_max_scale=args.crop_max_scale,
     )
     snap = snapshot_run(args.run, cfg, [args.video])
     print(f"clip   {args.video}")

@@ -26,8 +26,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from skelguard import paths  # noqa: E402
 from skelguard.probe import (  # noqa: E402
-    FPS_TARGET, VIDEO_EXTS, ProbeConfig, decide, make_yolo, probe_clip, snapshot_run,
-    stats_for,
+    FPS_TARGET, PX_BANDS, VIDEO_EXTS, WINDOW_FRAMES, ProbeConfig, decide, make_yolo,
+    probe_clip, snapshot_run, stats_for,
 )
 
 
@@ -50,6 +50,14 @@ def main() -> int:
     ap.add_argument("--yolo-conf", type=float, default=0.35)
     ap.add_argument("--iou", type=float, default=0.30)
     ap.add_argument("--no-video", action="store_true", help="skip the annotated mp4s")
+    ap.add_argument("--primary-only", action="store_true",
+                    help="score against the largest person only; use with --num-poses 1")
+    ap.add_argument("--crop", action="store_true",
+                    help="YOLO box -> upscale -> MediaPipe single-pose on the crop")
+    ap.add_argument("--crop-margin", type=float, default=0.20)
+    ap.add_argument("--crop-target-h", type=int, default=320,
+                    help="upscale each person to about this many px tall")
+    ap.add_argument("--crop-max-scale", type=float, default=8.0)
     ap.add_argument("--run", default="test run 1",
                     help="name of this run; outputs go to outputs/<kind>/<run>/")
     args = ap.parse_args()
@@ -64,7 +72,13 @@ def main() -> int:
         max_frames=args.max_frames, det_conf=args.det_conf, track_conf=args.track_conf,
         yolo_conf=args.yolo_conf, iou=args.iou,
         use_yolo=True, write_video=not args.no_video, run=args.run,
+        primary_only=args.primary_only,
+        crop=args.crop, crop_margin=args.crop_margin,
+        crop_target_h=args.crop_target_h, crop_max_scale=args.crop_max_scale,
     )
+    if args.num_poses == 1 and not args.crop and not args.primary_only:
+        print("  !! num_poses=1 without --primary-only: every extra person in frame is\n"
+              "     counted as a miss, so the miss rate measures your cap, not MediaPipe.\n")
 
     snap = snapshot_run(args.run, cfg, clips)
 
@@ -83,7 +97,7 @@ def main() -> int:
         s = stats_for(res.frames, res.people)
         fps = s["fps_when_detecting"]
         fps = fps if fps == fps else s["fps_median"]
-        verdict, _ = decide(s["miss_rate"], fps)
+        verdict, _ = decide(s["miss_rate"], fps, s.get("mode", "full"))
         rows.append({"clip": res.clip,
                      "src": f"{res.meta['src_w']}x{res.meta['src_h']}",
                      "src_h": res.meta["src_h"],
@@ -91,8 +105,9 @@ def main() -> int:
         all_people.append(res.people)
         all_frames.append(res.frames)
         print(f"        miss {s['miss_rate']:.1%}  |  ghosts {s.get('n_ghost', 0)}"
-              f" ({s.get('ghosts_per_min', float('nan')):.1f}/min)  |  {fps:.1f} fps  |  "
-              f"no-pose frames {s['frames_with_no_pose']:.0%}\n")
+              f"  |  {fps:.1f} fps  |  longest run "
+              f"{s.get('run_max', 0)}f ({s.get('run_max_s', 0):.1f}s)  |  "
+              f"usable {s.get('usable_window_rate', 0):.0%}\n")
 
     summary = pd.DataFrame(rows)
     people = pd.concat([p for p in all_people if not p.empty], ignore_index=True)
@@ -164,7 +179,37 @@ def main() -> int:
     print(f"    {'during crossings':30s} n={pooled.get('n_crossing', 0):6d}  "
           + (f"{r:6.1%}" if r == r else "   n/a"))
 
-    verdict, why = decide(pooled["miss_rate"], fps_pool)
+    # The pixel-height curve: the single most transferable result from these probes,
+    # because it is independent of clip resolution and framing.
+    print("\n  recall by person height in PIXELS (comparable across clips):")
+    for _, _, label in PX_BANDS:
+        n = pooled.get(f"px_{label}_n", 0)
+        r = pooled.get(f"px_{label}", float("nan"))
+        bar = "#" * int(round((r if r == r else 0) * 40))
+        print(f"    {label:>8s}  n={n:6d}  " + (f"{r:6.1%}" if r == r else "   n/a")
+              + f"  {bar}")
+
+    print(f"\n  CONTINUITY (recall says how often; this says whether it holds long enough)")
+    print(f"    frames with a detection      {pooled.get('frames_detected_rate', 0):.1%}")
+    print(f"    on/off flips                 {pooled.get('flips_per_s', 0):.1f} per second")
+    print(f"    longest unbroken run         {pooled.get('run_max', 0)} frames "
+          f"({pooled.get('run_max_s', 0):.1f}s),  median run "
+          f"{pooled.get('run_median', 0):.0f}")
+    print(f"    frames inside runs >= {WINDOW_FRAMES:<3d}    "
+          f"{pooled.get('usable_window_rate', 0):.1%}"
+          f"   -> {pooled.get('n_windows', 0)} training window(s) for WP5")
+    if pooled.get("n_windows", 0) == 0:
+        print("    !! no run reaches the window length: this footage yields NO training")
+        print("       samples and no stable track, whatever the recall says.")
+
+    if "mean_crop_scale" in pooled:
+        print(f"\n  mean upscale factor applied: {pooled['mean_crop_scale']:.2f}x")
+    if "mean_vis_detected" in pooled and pooled["mean_vis_detected"] == pooled["mean_vis_detected"]:
+        print(f"  mean landmark visibility when detected: {pooled['mean_vis_detected']:.3f}"
+              "   (low = a pose was returned but it is probably rubbish)")
+    print(f"  end-to-end fps incl. YOLO:  {pooled['fps_end_to_end']:.1f}")
+
+    verdict, why = decide(pooled["miss_rate"], fps_pool, pooled.get("mode", "full"))
     print("\n" + "-" * 86)
     print(f"DECISION (rule fixed before any numbers were seen): {verdict}")
     print(f"  {why}")
