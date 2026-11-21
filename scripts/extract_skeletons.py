@@ -184,7 +184,8 @@ def extract(clip: Path, meta: dict, yolo, args) -> tuple[pd.DataFrame, dict]:
             n_pose += int(obs.found)
             n_miss += int(not obs.found)
             cx = float((box[0] + box[2]) / 2.0)
-            track_frames.setdefault(tid, []).append((frame_i, cx, float(box[3])))
+            track_frames.setdefault(tid, []).append(
+                (frame_i, cx, float(box[3]), float(box[3] - box[1])))
 
             if obs.found:
                 for i in range(len(obs.pts_px)):
@@ -235,19 +236,33 @@ def extract(clip: Path, meta: dict, yolo, args) -> tuple[pd.DataFrame, dict]:
     elapsed = time.perf_counter() - t0
 
     # ---- which track is the subject? -------------------------------------------
-    # Bystanders stand still; the subject walks across the frame. Rank by how far the
-    # box centre actually travelled, and require a real track length so a two-frame
-    # flicker cannot win.
+    # Bystanders stand still; the subject walks. Two ways that shows up, and a frontal
+    # walk only shows the second:
+    #
+    #   span    how far the box centre travelled sideways. Big when someone crosses the
+    #           frame, near zero when they walk straight at the camera - which is also
+    #           near zero for somebody standing, so on its own it cannot tell them
+    #           apart. On walk01front it gave 26 px against 22 px, a coin flip.
+    #   grow    how much the box height changed, relative to its own median. A person
+    #           approaching the camera roughly doubles in height; a bystander does not
+    #           change at all. This is the signal that works on frontal footage.
+    #
+    # Taking the larger of the two covers both framings with one rule.
     stats = {}
     for tid, seen in track_frames.items():
         xs = np.array([s[1] for s in seen])
-        stats[tid] = {"n": len(seen), "span_px": float(xs.max() - xs.min())}
+        hs = np.array([s[3] for s in seen])
+        span = float(np.ptp(xs))
+        grow = float(np.ptp(hs)) / max(float(np.median(hs)), 1e-6)
+        stats[tid] = {"n": len(seen), "span_px": round(span, 1),
+                      "grow": round(grow, 3),
+                      "motion": round(max(span / max(w, 1), grow), 3)}
     primary = None
     if stats:
         moving = {t: s for t, s in stats.items()
-                  if s["n"] >= args.min_track and s["span_px"] >= 0.10 * w}
+                  if s["n"] >= args.min_track and s["motion"] >= 0.10}
         pool = moving or stats
-        primary = max(pool, key=lambda t: (pool[t]["n"], pool[t]["span_px"]))
+        primary = max(pool, key=lambda t: (pool[t]["motion"], pool[t]["n"]))
 
     df = pd.DataFrame(rows)
     if not df.empty:
