@@ -19,27 +19,84 @@ import argparse
 import sys
 from pathlib import Path
 
+import cv2
+import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from skelguard import paths  # noqa: E402
+from skelguard.geometry import fit_height_model  # noqa: E402
 from skelguard.probe import (  # noqa: E402
     FPS_TARGET, PX_BANDS, VIDEO_EXTS, WINDOW_FRAMES, ProbeConfig, decide, make_yolo,
     probe_clip, snapshot_run, stats_for,
 )
 
 
-def find_clips(folder: Path) -> list[Path]:
-    return sorted(p for p in folder.iterdir()
-                  if p.is_file() and p.suffix.lower() in VIDEO_EXTS)
+def find_clips(folder: Path, match: str = "") -> list[Path]:
+    """Every video under `folder`, recursively. `match` filters on the file name.
+
+    Recursive because the gait footage is organised one folder per subject-session,
+    and `match` because a session holds both camera angles and they are not
+    interchangeable - the side view is framed too tight to pose.
+    """
+    return sorted(p for p in folder.rglob("*")
+                  if p.is_file() and p.suffix.lower() in VIDEO_EXTS
+                  and (not match or match.lower() in p.name.lower()))
+
+
+def fit_clip_height_model(clip: Path, yolo, conf: float, stride: int,
+                          max_frames: int):
+    """Fit the perspective person-height model for this clip's camera view.
+
+    Returns (model_to_use, fitted_model_for_reporting, status). A weak fit is retained
+    for reporting but not used for crop scale; crop mode then falls back to the observed
+    box height, which still upscales distant people to the target size.
+    """
+    cap = cv2.VideoCapture(str(clip))
+    if not cap.isOpened():
+        return None, None, "could not open clip"
+    frame_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    feet_y: list[float] = []
+    heights: list[float] = []
+    frame_i = processed = 0
+    while True:
+        ok, frame = cap.read()
+        if not ok or (max_frames and processed >= max_frames):
+            break
+        if frame_i % max(1, stride):
+            frame_i += 1
+            continue
+        processed += 1
+        result = yolo.predict(frame, classes=[0], conf=conf, verbose=False)[0]
+        if result.boxes is not None and len(result.boxes):
+            boxes = result.boxes.xyxy.cpu().numpy()
+            feet_y.extend(float(b[3]) for b in boxes)
+            heights.extend(float(b[3] - b[1]) for b in boxes)
+        frame_i += 1
+    cap.release()
+
+    if len(feet_y) < 10:
+        return None, None, f"not enough detections ({len(feet_y)})"
+    if np.ptp(feet_y) < 0.15 * max(frame_h, 1):
+        return None, None, "insufficient perspective span; using detected box height"
+    fitted = fit_height_model(np.asarray(feet_y), np.asarray(heights))
+    if fitted is None:
+        return None, None, "fit failed; using detected box height"
+    # Conservative checks reject the known overhead/wide-angle failure mode.
+    horizon_ok = -0.25 * frame_h <= fitted.y_horizon <= 0.75 * frame_h
+    if fitted.inlier_rate < 0.80 or fitted.median_rel_err > 0.10 or not horizon_ok:
+        return None, fitted, "fit rejected; using detected box height"
+    return fitted, fitted, "fit accepted; expected height drives crop scale"
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--folder", type=Path, default=paths.RAW)
+    ap.add_argument("--match", default="",
+                    help="only clips whose file name contains this, e.g. 'front'")
     ap.add_argument("--model", choices=["lite", "full", "heavy"], default="full")
     ap.add_argument("--num-poses", type=int, default=5)
     ap.add_argument("--width", type=int, default=0, help="0 = native (we standardise on 720p)")
@@ -62,10 +119,11 @@ def main() -> int:
                     help="name of this run; outputs go to outputs/<kind>/<run>/")
     args = ap.parse_args()
 
-    clips = find_clips(args.folder)
+    clips = find_clips(args.folder, args.match)
     if not clips:
         raise SystemExit(f"[FAIL] no videos in {args.folder} "
-                         f"(looked for {', '.join(VIDEO_EXTS)})")
+                         f"(looked for {', '.join(VIDEO_EXTS)}"
+                         + (f", name containing {args.match!r}" if args.match else "") + ")")
 
     cfg = ProbeConfig(
         model=args.model, num_poses=args.num_poses, width=args.width, stride=args.stride,
@@ -93,7 +151,11 @@ def main() -> int:
 
     for i, clip in enumerate(clips, 1):
         print(f"[{i}/{len(clips)}] {clip.name}")
-        res = probe_clip(clip, cfg, yolo=yolo)
+        height_model, fitted_model, height_status = fit_clip_height_model(
+            clip, yolo, cfg.yolo_conf, cfg.stride, cfg.max_frames
+        )
+        print(f"        height model: {height_status}")
+        res = probe_clip(clip, cfg, yolo=yolo, height_model=height_model)
         s = stats_for(res.frames, res.people)
         fps = s["fps_when_detecting"]
         fps = fps if fps == fps else s["fps_median"]
@@ -101,6 +163,13 @@ def main() -> int:
         rows.append({"clip": res.clip,
                      "src": f"{res.meta['src_w']}x{res.meta['src_h']}",
                      "src_h": res.meta["src_h"],
+                     "height_model_status": height_status,
+                     "height_model_k": fitted_model.k if fitted_model else np.nan,
+                     "height_model_horizon": fitted_model.y_horizon if fitted_model else np.nan,
+                     "height_model_inliers": fitted_model.inlier_rate
+                     if fitted_model else np.nan,
+                     "height_model_median_rel_err": fitted_model.median_rel_err
+                     if fitted_model else np.nan,
                      **s, "fps_used": fps, "verdict": verdict})
         all_people.append(res.people)
         all_frames.append(res.frames)

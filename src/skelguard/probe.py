@@ -270,9 +270,58 @@ def yolo_person_boxes(model, conf: float, frame_bgr) -> list[np.ndarray]:
     return [b.astype(np.float32) for b in res.boxes.xyxy.cpu().numpy()]
 
 
+def _per_landmark(lms, name: str) -> np.ndarray:
+    """One value per landmark, as a (33,) array. Missing or None -> 0.0."""
+    out = []
+    for lm in lms:
+        v = getattr(lm, name, None)
+        out.append(float(v) if v is not None else 0.0)
+    return np.asarray(out, dtype=np.float32)
+
+
+def world_array(world_lms) -> np.ndarray:
+    """(33, 3) metres, origin at the midpoint of the hips."""
+    return np.asarray([[lm.x, lm.y, lm.z] for lm in world_lms], dtype=np.float32)
+
+
+@dataclass
+class PoseObservation:
+    """One MediaPipe pose, keeping everything the model returned instead of a summary.
+
+    `pts_px` is all the WP0 probes ever used. The rest is here because gait
+    identification needs it and it costs nothing - BlazePose computes all of it in the
+    same forward pass:
+
+      world       hip-centred metric 3D. Removes camera distance by construction, so
+                  the same person at 3 m and at 8 m gives comparable numbers. Without
+                  it you must normalise the 2D by a reference length that is itself a
+                  noisy estimate from the same landmarks.
+      visibility  per landmark, not averaged. The gait cycle is segmented from the
+                  ankles (27, 28), so the question is whether *those* were seen - a
+                  mean over 33 points cannot answer it and fails in both directions.
+    """
+
+    pts_px: np.ndarray | None               # (33, 2) full-frame pixels
+    scale: float                            # upscale factor applied to the crop
+    visibility: np.ndarray | None = None    # (33,)
+    presence: np.ndarray | None = None      # (33,)
+    world: np.ndarray | None = None         # (33, 3) metres, hip-centred
+    z_norm: np.ndarray | None = None        # (33,) normalised depth from pose_landmarks
+
+    @property
+    def found(self) -> bool:
+        return self.pts_px is not None
+
+    @property
+    def mean_visibility(self) -> float:
+        """The old scalar, kept so existing reports and CSVs stay unchanged."""
+        return float(self.visibility.mean()) if self.visibility is not None else 0.0
+
+
 def pose_on_crop(landmarker, frame_bgr, box: np.ndarray, cfg: ProbeConfig,
-                 w: int, h: int) -> tuple[np.ndarray | None, float, float]:
-    """Crop one person, upscale, run single-pose. Returns (landmarks_px_full, vis, scale).
+                 w: int, h: int, person_h_px: float | None = None
+                 ) -> PoseObservation:
+    """Crop one person, upscale, run single-pose. Returns a PoseObservation.
 
     Landmarks come back in FULL-FRAME pixel coordinates, so everything downstream is
     unchanged by the crop.
@@ -282,12 +331,16 @@ def pose_on_crop(landmarker, frame_bgr, box: np.ndarray, cfg: ProbeConfig,
     ex = expand_box(box, cfg.crop_margin, w, h)
     x0, y0, x1, y1 = [int(round(v)) for v in ex]
     if x1 - x0 < 8 or y1 - y0 < 8:
-        return None, 0.0, 1.0
+        return PoseObservation(pts_px=None, scale=1.0)
 
     crop = frame_bgr[y0:y1, x0:x1]
     ch, cw = crop.shape[:2]
 
-    person_h = max(1.0, float(box[3] - box[1]))
+    # A calibrated height model compensates for perspective at this foot position.
+    # Otherwise use the detected box height, which still dynamically upscales distant
+    # people but is more sensitive to detector jitter and partial occlusion.
+    person_h = max(1.0, float(person_h_px if person_h_px is not None
+                              else box[3] - box[1]))
     scale = float(np.clip(cfg.crop_target_h / person_h, 1.0, cfg.crop_max_scale))
     if scale > 1.0:
         crop = cv2.resize(crop, (int(cw * scale), int(ch * scale)),
@@ -296,16 +349,25 @@ def pose_on_crop(landmarker, frame_bgr, box: np.ndarray, cfg: ProbeConfig,
     rgb = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
     res = landmarker.detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb))
     if not res.pose_landmarks:
-        return None, 0.0, scale
+        return PoseObservation(pts_px=None, scale=scale)
 
     lms = res.pose_landmarks[0]
     # normalised-in-crop -> pixels in the (unscaled) crop -> pixels in the full frame
     pts = landmarks_px(lms, cw, ch) + np.array([x0, y0], dtype=np.float32)
-    return pts, mean_visibility(lms), scale
+    world_lms = getattr(res, "pose_world_landmarks", None)
+    return PoseObservation(
+        pts_px=pts,
+        scale=scale,
+        visibility=_per_landmark(lms, "visibility"),
+        presence=_per_landmark(lms, "presence"),
+        z_norm=_per_landmark(lms, "z"),
+        world=world_array(world_lms[0]) if world_lms else None,
+    )
 
 
 # --------------------------------------------------------------------------- the probe
-def probe_clip(video: Path, cfg: ProbeConfig, yolo=None, verbose: bool = True) -> ProbeResult:
+def probe_clip(video: Path, cfg: ProbeConfig, yolo=None, verbose: bool = True,
+               height_model=None) -> ProbeResult:
     """Run the probe over one clip. Returns tidy dataframes."""
     import mediapipe as mp
 
@@ -398,8 +460,19 @@ def probe_clip(video: Path, cfg: ProbeConfig, yolo=None, verbose: bool = True) -
             t0 = time.perf_counter()
             if cfg.crop:
                 for box in eval_boxes:
-                    pts, vis, sc = pose_on_crop(lm, frame_bgr, box, cfg, w, h)
-                    per_person.append({"pts": pts, "vis": vis, "scale": sc})
+                    expected_h = (float(height_model.expected_px(box[3]))
+                                  if height_model is not None else np.nan)
+                    depth_proxy = (float(height_model.distance_proxy(box[3]))
+                                   if height_model is not None else np.nan)
+                    obs = pose_on_crop(
+                        lm, frame_bgr, box, cfg, w, h,
+                        person_h_px=expected_h if np.isfinite(expected_h) and expected_h > 0
+                        else None,
+                    )
+                    pts, vis, sc = obs.pts_px, obs.mean_visibility, obs.scale
+                    per_person.append({"pts": pts, "vis": vis, "scale": sc, "obs": obs,
+                                       "expected_h": expected_h,
+                                       "depth_proxy": depth_proxy})
                     if pts is not None:
                         poses_px.append(pts)
                         vis_list.append(vis)
@@ -452,6 +525,16 @@ def probe_clip(video: Path, cfg: ProbeConfig, yolo=None, verbose: bool = True) -
                     row["crop_scale"] = round(d["scale"], 2)
                     row["vis"] = round(d["vis"], 3) if d["pts"] is not None else np.nan
                     row["upscaled_h"] = round(float(box[3] - box[1]) * d["scale"], 1)
+                    row["expected_h_px"] = (round(d["expected_h"], 1)
+                                             if np.isfinite(d["expected_h"]) else np.nan)
+                    row["upscaled_expected_h_px"] = (
+                        round(d["expected_h"] * d["scale"], 1)
+                        if np.isfinite(d["expected_h"]) else np.nan
+                    )
+                    row["relative_depth_proxy"] = (
+                        round(d["depth_proxy"], 5)
+                        if np.isfinite(d["depth_proxy"]) else np.nan
+                    )
                 people_rows.append(row)
 
             # ---------------------------------------------------- draw
@@ -497,7 +580,8 @@ def probe_clip(video: Path, cfg: ProbeConfig, yolo=None, verbose: bool = True) -
     return ProbeResult(
         clip=video.stem, frames=frames, people=people,
         meta={"src_w": src_w, "src_h": src_h, "src_fps": src_fps, "mode": mode,
-              "infer_w": w, "infer_h": h, "wall_s": wall, "n_processed": len(frames)},
+              "infer_w": w, "infer_h": h, "wall_s": wall, "n_processed": len(frames),
+              "height_model": asdict(height_model) if height_model is not None else None},
         video_path=out_video if writer is not None else None,
         frames_csv=frames_csv, people_csv=people_csv,
     )
