@@ -1,0 +1,43 @@
+{
+  "run": "gait1",
+  "timestamp": "2026-11-20T19:25:12",
+  "command": "scripts/probe_pose.py data/raw/walk4/walk04side.mp4 --crop --run gait1",
+  "git_commit": "d892a87",
+  "config": {
+    "model": "full",
+    "num_poses": 5,
+    "width": 0,
+    "stride": 1,
+    "max_frames": 0,
+    "det_conf": 0.5,
+    "track_conf": 0.5,
+    "yolo_conf": 0.35,
+    "iou": 0.3,
+    "use_yolo": true,
+    "write_video": true,
+    "run": "gait1",
+    "primary_only": false,
+    "crop": true,
+    "crop_margin": 0.2,
+    "crop_target_h": 320,
+    "crop_max_scale": 8.0
+  },
+  "clips": [
+    "walk04side.mp4"
+  ],
+  "python": "3.11.14",
+  "platform": "Windows 10",
+  "versions": {
+    "mediapipe": "1.2.3",
+    "ultralytics": "8.4.212",
+    "opencv": "5.0.0",
+    "numpy": "2.4.6",
+    "torch": "2.15.0+cpu"
+  },
+  "code_snapshot": [
+    "src/skelguard/probe.py",
+    "src/skelguard/paths.py",
+    "scripts/probe_batch.py",
+    "scripts/probe_pose.py"
+  ]
+}

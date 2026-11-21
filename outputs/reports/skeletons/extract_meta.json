@@ -1,0 +1,710 @@
+[
+  {
+    "clip": "walk01front-2",
+    "session": "walk01",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt",
+    "frames": 151,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 295,
+    "pose_missed": 7,
+    "pose_rate": 0.9768,
+    "tracks": {
+      "0": {
+        "n": 151,
+        "span_px": 124.40234375
+      },
+      "1": {
+        "n": 151,
+        "span_px": 5.783042907714844
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 151,
+    "landmark_rows": 9735,
+    "has_world": true,
+    "seconds": 16.7,
+    "fps_processing": 9.1,
+    "file": "walk01front-2.parquet"
+  },
+  {
+    "clip": "walk01front-back",
+    "session": "walk01",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt",
+    "frames": 120,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 240,
+    "pose_missed": 0,
+    "pose_rate": 1.0,
+    "tracks": {
+      "0": {
+        "n": 120,
+        "span_px": 85.75189208984375
+      },
+      "1": {
+        "n": 120,
+        "span_px": 12.633193969726562
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 120,
+    "landmark_rows": 7920,
+    "has_world": true,
+    "seconds": 13.1,
+    "fps_processing": 9.2,
+    "file": "walk01front-back.parquet"
+  },
+  {
+    "clip": "walk01front",
+    "session": "walk01",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt",
+    "frames": 90,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 180,
+    "pose_missed": 0,
+    "pose_rate": 1.0,
+    "tracks": {
+      "0": {
+        "n": 90,
+        "span_px": 26.18780517578125
+      },
+      "1": {
+        "n": 90,
+        "span_px": 22.146560668945312
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 90,
+    "landmark_rows": 5940,
+    "has_world": true,
+    "seconds": 9.3,
+    "fps_processing": 9.7,
+    "file": "walk01front.parquet"
+  },
+  {
+    "clip": "walk02front-2",
+    "session": "walk02",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt",
+    "frames": 120,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 240,
+    "pose_missed": 0,
+    "pose_rate": 1.0,
+    "tracks": {
+      "0": {
+        "n": 120,
+        "span_px": 138.48895263671875
+      },
+      "1": {
+        "n": 120,
+        "span_px": 6.7078857421875
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 120,
+    "landmark_rows": 7920,
+    "has_world": true,
+    "seconds": 13.2,
+    "fps_processing": 9.1,
+    "file": "walk02front-2.parquet"
+  },
+  {
+    "clip": "walk02front",
+    "session": "walk02",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt",
+    "frames": 210,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 403,
+    "pose_missed": 17,
+    "pose_rate": 0.9595,
+    "tracks": {
+      "0": {
+        "n": 210,
+        "span_px": 193.37908935546875
+      },
+      "1": {
+        "n": 210,
+        "span_px": 23.074012756347656
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 210,
+    "landmark_rows": 13299,
+    "has_world": true,
+    "seconds": 21.3,
+    "fps_processing": 9.9,
+    "file": "walk02front.parquet"
+  },
+  {
+    "clip": "walk03front-2",
+    "session": "walk03",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt-grey",
+    "frames": 151,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 298,
+    "pose_missed": 4,
+    "pose_rate": 0.9868,
+    "tracks": {
+      "0": {
+        "n": 151,
+        "span_px": 64.1046142578125
+      },
+      "1": {
+        "n": 151,
+        "span_px": 10.883777618408203
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 151,
+    "landmark_rows": 9834,
+    "has_world": true,
+    "seconds": 16.2,
+    "fps_processing": 9.3,
+    "file": "walk03front-2.parquet"
+  },
+  {
+    "clip": "walk03front",
+    "session": "walk03",
+    "view": "front",
+    "subject": "A",
+    "condition": "tshirt-grey",
+    "frames": 181,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 362,
+    "pose_missed": 0,
+    "pose_rate": 1.0,
+    "tracks": {
+      "0": {
+        "n": 181,
+        "span_px": 89.72064208984375
+      },
+      "1": {
+        "n": 181,
+        "span_px": 7.289894104003906
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 181,
+    "landmark_rows": 11946,
+    "has_world": true,
+    "seconds": 20.0,
+    "fps_processing": 9.0,
+    "file": "walk03front.parquet"
+  },
+  {
+    "clip": "walk04front",
+    "session": "walk04",
+    "view": "front",
+    "subject": "A",
+    "condition": "jacket",
+    "frames": 300,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 571,
+    "pose_missed": 41,
+    "pose_rate": 0.933,
+    "tracks": {
+      "0": {
+        "n": 300,
+        "span_px": 214.81704711914062
+      },
+      "1": {
+        "n": 300,
+        "span_px": 12.512752532958984
+      },
+      "2": {
+        "n": 12,
+        "span_px": 111.582275390625
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 300,
+    "landmark_rows": 18843,
+    "has_world": true,
+    "seconds": 33.9,
+    "fps_processing": 8.9,
+    "file": "walk04front.parquet"
+  },
+  {
+    "clip": "walk05front",
+    "session": "walk05",
+    "view": "front",
+    "subject": "B",
+    "condition": "sweater",
+    "frames": 481,
+    "fps": 30.0,
+    "size": "1280x720",
+    "poses": 931,
+    "pose_missed": 31,
+    "pose_rate": 0.9678,
+    "tracks": {
+      "0": {
+        "n": 481,
+        "span_px": 409.79461669921875
+      },
+      "1": {
+        "n": 481,
+        "span_px": 123.04187774658203
+      }
+    },
+    "primary_track": 0,
+    "primary_frames": 481,
+    "landmark_rows": 30723,
+    "has_world": true,
+    "seconds": 58.1,
+    "fps_processing": 8.3,
+    "file": "walk05front.parquet"
+  },
+  {
+    "clip": "WalkByShop1front",
+    "session": "walkbyshop1front",
+    "view": "front",
+    "subject": "?",
+    "condition": "?",
+    "frames": 2360,
+    "fps": 25.0,
+    "size": "384x288",
+    "poses": 332,
+    "pose_missed": 2211,
+    "pose_rate": 0.1306,
+    "tracks": {
+      "0": {
+        "n": 55,
+        "span_px": 1.4908447265625
+      },
+      "1": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "2": {
+        "n": 4,
+        "span_px": 0.3635406494140625
+      },
+      "3": {
+        "n": 3,
+        "span_px": 0.013031005859375
+      },
+      "4": {
+        "n": 2,
+        "span_px": 0.28417205810546875
+      },
+      "5": {
+        "n": 2,
+        "span_px": 0.05889129638671875
+      },
+      "6": {
+        "n": 4,
+        "span_px": 0.288482666015625
+      },
+      "7": {
+        "n": 53,
+        "span_px": 1.074554443359375
+      },
+      "8": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "9": {
+        "n": 5,
+        "span_px": 0.572723388671875
+      },
+      "10": {
+        "n": 3,
+        "span_px": 0.4304046630859375
+      },
+      "11": {
+        "n": 107,
+        "span_px": 1.3233642578125
+      },
+      "12": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "13": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "14": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "15": {
+        "n": 5,
+        "span_px": 0.251373291015625
+      },
+      "16": {
+        "n": 124,
+        "span_px": 1.70196533203125
+      },
+      "17": {
+        "n": 7,
+        "span_px": 0.3036956787109375
+      },
+      "18": {
+        "n": 8,
+        "span_px": 0.745269775390625
+      },
+      "19": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "20": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "21": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "22": {
+        "n": 2,
+        "span_px": 0.00701141357421875
+      },
+      "23": {
+        "n": 9,
+        "span_px": 0.5125808715820312
+      },
+      "24": {
+        "n": 2,
+        "span_px": 0.04499053955078125
+      },
+      "25": {
+        "n": 121,
+        "span_px": 1.563446044921875
+      },
+      "26": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "27": {
+        "n": 3,
+        "span_px": 0.5501632690429688
+      },
+      "28": {
+        "n": 5,
+        "span_px": 0.2946929931640625
+      },
+      "29": {
+        "n": 9,
+        "span_px": 0.37996673583984375
+      },
+      "30": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "31": {
+        "n": 7,
+        "span_px": 0.708038330078125
+      },
+      "32": {
+        "n": 48,
+        "span_px": 1.013671875
+      },
+      "33": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "34": {
+        "n": 85,
+        "span_px": 353.7578024864197
+      },
+      "35": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "36": {
+        "n": 4,
+        "span_px": 0.5295639038085938
+      },
+      "37": {
+        "n": 7,
+        "span_px": 0.7508544921875
+      },
+      "38": {
+        "n": 145,
+        "span_px": 1.812164306640625
+      },
+      "39": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "40": {
+        "n": 2,
+        "span_px": 0.10886383056640625
+      },
+      "41": {
+        "n": 4,
+        "span_px": 0.23394775390625
+      },
+      "42": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "43": {
+        "n": 5,
+        "span_px": 0.5062332153320312
+      },
+      "44": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "45": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "46": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "47": {
+        "n": 470,
+        "span_px": 2.61248779296875
+      },
+      "48": {
+        "n": 2,
+        "span_px": 0.09317779541015625
+      },
+      "49": {
+        "n": 3,
+        "span_px": 0.2339324951171875
+      },
+      "50": {
+        "n": 2,
+        "span_px": 0.11107635498046875
+      },
+      "51": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "52": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "53": {
+        "n": 3,
+        "span_px": 0.052734375
+      },
+      "54": {
+        "n": 3,
+        "span_px": 0.1676788330078125
+      },
+      "55": {
+        "n": 3,
+        "span_px": 0.35315704345703125
+      },
+      "56": {
+        "n": 2,
+        "span_px": 0.13957977294921875
+      },
+      "57": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "58": {
+        "n": 3,
+        "span_px": 0.11569976806640625
+      },
+      "59": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "60": {
+        "n": 3,
+        "span_px": 0.43592071533203125
+      },
+      "61": {
+        "n": 8,
+        "span_px": 0.5615692138671875
+      },
+      "62": {
+        "n": 5,
+        "span_px": 0.4087982177734375
+      },
+      "63": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "64": {
+        "n": 9,
+        "span_px": 0.373321533203125
+      },
+      "65": {
+        "n": 7,
+        "span_px": 0.5385971069335938
+      },
+      "66": {
+        "n": 273,
+        "span_px": 304.57116413116455
+      },
+      "67": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "68": {
+        "n": 24,
+        "span_px": 0.46024322509765625
+      },
+      "69": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "70": {
+        "n": 4,
+        "span_px": 0.1069488525390625
+      },
+      "71": {
+        "n": 5,
+        "span_px": 0.104461669921875
+      },
+      "72": {
+        "n": 139,
+        "span_px": 345.2090549468994
+      },
+      "73": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "74": {
+        "n": 7,
+        "span_px": 0.64739990234375
+      },
+      "75": {
+        "n": 14,
+        "span_px": 27.572418212890625
+      },
+      "76": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "77": {
+        "n": 242,
+        "span_px": 2.80810546875
+      },
+      "78": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "79": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "80": {
+        "n": 3,
+        "span_px": 0.17636871337890625
+      },
+      "81": {
+        "n": 45,
+        "span_px": 119.71316528320312
+      },
+      "82": {
+        "n": 3,
+        "span_px": 0.306854248046875
+      },
+      "83": {
+        "n": 3,
+        "span_px": 3.4892444610595703
+      },
+      "84": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "85": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "86": {
+        "n": 2,
+        "span_px": 0.10193634033203125
+      },
+      "87": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "88": {
+        "n": 270,
+        "span_px": 301.1100845336914
+      },
+      "89": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "90": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "91": {
+        "n": 31,
+        "span_px": 0.7510299682617188
+      },
+      "92": {
+        "n": 4,
+        "span_px": 0.24564361572265625
+      },
+      "93": {
+        "n": 2,
+        "span_px": 0.0888824462890625
+      },
+      "94": {
+        "n": 3,
+        "span_px": 4.42431640625
+      },
+      "95": {
+        "n": 6,
+        "span_px": 0.1923828125
+      },
+      "96": {
+        "n": 12,
+        "span_px": 3.36474609375
+      },
+      "97": {
+        "n": 47,
+        "span_px": 2.476806640625
+      },
+      "98": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "99": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "100": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "101": {
+        "n": 1,
+        "span_px": 0.0
+      },
+      "102": {
+        "n": 4,
+        "span_px": 0.11095428466796875
+      }
+    },
+    "primary_track": 66,
+    "primary_frames": 273,
+    "landmark_rows": 10956,
+    "has_world": true,
+    "seconds": 140.4,
+    "fps_processing": 16.8,
+    "file": "WalkByShop1front.parquet"
+  }
+]
