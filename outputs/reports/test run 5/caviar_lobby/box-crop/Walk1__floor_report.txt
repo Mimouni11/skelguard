@@ -1,0 +1,33 @@
+============================================================================================
+TEST RUN 4 - FLOOR TRACKING + MEDIAPIPE POSE   Walk1.mpg
+scene=caviar_lobby  384x288 @25.0fps  frames=612  conf=0.25  stride=1
+============================================================================================
+
+[1] GEOMETRIC GATE  (does floor geometry reject what confidence accepts?)
+    disabled: this scene has no height model
+
+[2] TRACKS  (>= 15 frames)
+      id     n   dur_s   path_m   v_raw   v_kf_m  v_kf_px   (median m/s)
+       2    63    3.16     7.85    2.32     2.47     2.37
+       7    18     1.6    13.18    2.03     3.18     2.84
+
+[3] IS THE CALIBRATION BELIEVABLE?  (walking is 0.8-2.0 m/s, speed window = 0.40s)
+    raw                median= 2.22  p90= 4.53  max= 19.98  in walking range= 24.7%  impossible=4.9%
+    kalman in METRES   median= 2.52  p90= 4.43  max= 18.07  in walking range= 28.4%  impossible=6.2%
+    kalman in PIXELS   median= 2.48  p90= 4.37  max= 18.11  in walking range= 25.9%  impossible=6.2%
+    `impossible` (>10 m/s) should be ~0. If it is not, the homography is wrong,
+    or the tracker is swapping identities between people.
+
+[4] WHERE DOES KALMAN BELONG?
+    speed jitter (std of frame-to-frame change):  metres=2.925  pixels=2.956
+    fraction inside walking range:                metres=28.4%  pixels=25.9%
+    Smoothing in pixels assumes constant pixel velocity, which perspective
+    makes false: the same stride covers fewer pixels further away, so the
+    filter fights the geometry and drags the estimate near the horizon.
+    VERDICT: metres
+
+[5] MEDIAPIPE POSE   found=54  missed=44  recall against kept YOLO boxes=55.1%
+    model=full  target crop height=320px  confidence=0.50
+    Pose recall is relative to kept YOLO detections, not ground truth.
+
+[6] SPEED   612 frames in 28.0s  = 21.8 fps end-to-end (YOLO + pose + homography)

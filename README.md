@@ -22,13 +22,38 @@ and speed; the zone drawn; visible alerts), a CSV event log, a heatmap and a flo
 ## Pipeline
 
 ```
-video -> MediaPipe PoseLandmarker (multi-pose) -> own tracker (Hungarian + Kalman)
-      -> smoothing + homography to metres -> kinematics
+video -> YOLOv8 person boxes -> crop + upscale -> MediaPipe PoseLandmarker (single-pose)
+      -> own tracker -> smoothing + homography to metres -> kinematics
       -> rules engine  AND  from-scratch MLP/LSTM  -> alerts + outputs
 ```
 
-YOLOv8 + ByteTrack is the **fallback only**, used if MediaPipe misses too many people or
-swaps IDs too often on our own footage. Everything downstream is unchanged either way.
+The WP0 probes found that full-frame MediaPipe misses distant people and can produce ghost
+poses. YOLO therefore supplies person boxes; MediaPipe estimates one skeleton inside each
+expanded, upscaled crop. Position tracking and floor geometry remain available when a pose
+is missed. ByteTrack remains a candidate if our own tracker proves too weak.
+
+Test run 4 wires this crop-pose path into floor tracking:
+
+```powershell
+uv run python scripts/probe_floor.py "data/raw/Workers walking in hallway of office.mp4" `
+  --scene hallway --conf 0.10 --speed-window 0.40 --run "test run 4"
+```
+
+It writes the annotated video, floor track CSV, per-landmark skeleton CSV, and a report
+under `outputs/reports/test run 4/` and `outputs/videos/test run 4/`.
+
+To run the crop-pose and per-clip perspective-height probe on every video in `data/raw`:
+
+```powershell
+uv run python scripts/probe_batch.py --crop --model full --yolo-conf 0.10 `
+  --crop-target-h 320 --crop-margin 0.20 --crop-max-scale 8 `
+  --run "test run 4/all clips"
+```
+
+Each clip gets its own expected-person-height fit. A reliable fit scales the pose crop from
+the person's foot position in the frame; rejected fits are recorded and fall back to the
+detection box height. This height fit estimates relative depth, not floor metres. Absolute
+floor distances still require a measured homography for each camera view.
 
 ## Setup
 

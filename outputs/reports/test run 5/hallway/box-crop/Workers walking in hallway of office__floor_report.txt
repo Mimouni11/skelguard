@@ -1,0 +1,41 @@
+============================================================================================
+TEST RUN 4 - FLOOR TRACKING + MEDIAPIPE POSE   Workers walking in hallway of office.mp4
+scene=hallway  1280x720 @25.0fps  frames=948  conf=0.25  stride=1
+============================================================================================
+
+[1] GEOMETRIC GATE  (does floor geometry reject what confidence accepts?)
+    height model: h_px = 0.556 * (y_feet - 31.2)   tol=35%
+    conf band      boxes   gated   rejected
+    0.25-0.5          98       1      1.0%
+    >=0.5            634       1      0.2%
+    TOTAL            732       2      0.3%
+    Only 2 boxes were rejected, too few to show the gate removes
+    junk. On a clip with no confirmed false positives this is expected,
+    and the gate's usefulness stays unproven rather than disproven.
+
+[2] TRACKS  (>= 15 frames)
+      id     n   dur_s   path_m   v_raw   v_kf_m  v_kf_px   (median m/s)
+       1   167     8.0     17.0    1.58     1.64     1.63
+       6   280   11.16    20.79    1.42     1.46     1.44
+       7   262   10.44    37.41    2.06     2.13     2.07
+
+[3] IS THE CALIBRATION BELIEVABLE?  (walking is 0.8-2.0 m/s, speed window = 0.40s)
+    raw                median= 1.57  p90= 2.78  max= 14.94  in walking range= 58.7%  impossible=0.7%
+    kalman in METRES   median= 1.59  p90= 2.62  max= 12.53  in walking range= 62.5%  impossible=1.0%
+    kalman in PIXELS   median= 1.58  p90= 2.64  max= 12.90  in walking range= 60.5%  impossible=0.8%
+    `impossible` (>10 m/s) should be ~0. If it is not, the homography is wrong,
+    or the tracker is swapping identities between people.
+
+[4] WHERE DOES KALMAN BELONG?
+    speed jitter (std of frame-to-frame change):  metres=0.442  pixels=0.487
+    fraction inside walking range:                metres=62.5%  pixels=60.5%
+    Smoothing in pixels assumes constant pixel velocity, which perspective
+    makes false: the same stride covers fewer pixels further away, so the
+    filter fights the geometry and drags the estimate near the horizon.
+    VERDICT: metres
+
+[5] MEDIAPIPE POSE   found=612  missed=118  recall against kept YOLO boxes=83.8%
+    model=full  target crop height=320px  confidence=0.50
+    Pose recall is relative to kept YOLO detections, not ground truth.
+
+[6] SPEED   948 frames in 56.1s  = 16.9 fps end-to-end (YOLO + pose + homography)

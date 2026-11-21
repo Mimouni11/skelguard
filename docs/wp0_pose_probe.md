@@ -1,6 +1,6 @@
 # WP0 — Pose probe: what we measured, and what the architecture must therefore be
 
-Decision record for test runs 1, 2, 3a and 3b. Every number below comes from a run whose
+Decision record for test runs 1, 2, 3a, 3b and 4. Every number below comes from a run whose
 code snapshot and CSVs are in `outputs/reports/<run>/`. Nothing here is from the
 literature; it is all measured on our own clips.
 
@@ -209,6 +209,10 @@ The shape is right — it almost never touches a confident detection. But with o
 rejections on a clip containing no false positives, **the gate is unproven, not
 validated.** It is cheap insurance whose real test is footage that actually contains junk.
 
+> **Superseded by 8.3.** That test has since been run. The gate is *disproven* for
+> human-sized objects: it keeps a mannequin at 5.5 % geometric error. It rejects wrong
+> *sizes*, not non-people.
+
 ### Extrapolation limit
 
 One track read 37.4 m of path in 10.4 s = 3.6 m/s average. The cause: the calibration
@@ -240,7 +244,154 @@ detection.
 5. **Zones are defined in metres on the floor plane**, not in image pixels, so they stay
    valid if the camera is re-mounted — only the homography is re-clicked.
 
-## 7. Reproducing
+## 7. Test run 4 — pose wired into floor tracking
+
+Test run 4 adds the adopted crop pose pass to the test run 3b floor tracker. Each kept
+YOLO detection is expanded by 20%, upscaled toward 320 px person height (maximum 8×), and
+sent to MediaPipe Full in single-pose image mode. The pose is attached to the track ID;
+floor position still comes from the YOLO box foot point, so a pose miss does not erase the
+person's location.
+
+Hallway result (`conf=0.10`, 948 frames):
+
+| Measure | Result |
+|---|---:|
+| Kept YOLO boxes / track observations | 809 |
+| Poses found | 624 (77.1%) |
+| Poses missed | 185 |
+| Skeleton output | 20,592 landmarks (33 per pose) |
+| End-to-end speed, YOLO + pose + homography | 15.4 fps |
+
+Pose rate is against kept YOLO detections, not ground truth. This is a useful integration
+result, not a final recall score. The full-model pipeline is only just above the project's
+15 fps target on this CPU, and a first pass measured 13.6 fps; treat the real-time result as
+borderline and try the Lite pose model if a stable margin is needed. The floor gate also
+rejected only six boxes, with no confirmed false positives in this clip, so its ability to
+remove junk remains unproven.
+
+Artifacts are saved under `outputs/reports/test run 4/` and
+`outputs/videos/test run 4/`. The report has per-observation pose status, the skeleton CSV
+has one row per landmark, and the annotated video draws the skeleton over each track.
+
+## 8. Test run 5 — every calibrated clip, with controls
+
+Run 4 left two holes. Floor metres had only ever been computed for the hallway, because it
+was the only calibrated scene, so "does the geometry preserve distance" was untested
+anywhere else. And run 4 changed the crop-scale rule *and* the YOLO confidence together,
+so its recall could not be attributed to either. Run 5 calibrates all four clips and holds
+confidence fixed at 0.25 across every clip and both arms.
+
+### 8.1 Geometry per camera
+
+| Clip | Scene | Tracks | Median m/s | In walking range | Impossible |
+|---|---|---:|---:|---:|---:|
+| hallway | hallway | 3 | 1.59 | 62.5 % | 1.0 % |
+| WalkByShop1front | shopfront | 17 | **0.05** | 12.7 % | 0.0 % |
+| Walk1 | caviar_lobby | 2 | 2.52 | 28.4 % | 6.2 % |
+| Meet_Crowd | caviar_lobby_2 | 2 | 2.09 | 32.9 % | 0.0 % |
+
+The homography survives the fisheye views better than the height model did — Meet_Crowd
+reports no impossible speeds at all. This is expected: a homography is a general
+projective map of a plane and absorbs any planar perspective exactly, whereas the height
+model additionally assumes a pinhole camera with no roll. Walk1's 6.2 % impossible comes
+from two short tracks, not from the mapping.
+
+Shopfront's 0.05 m/s is **not** a calibration failure. See 8.3.
+
+### 8.2 A/B — does calibrated height improve the pose crop?
+
+Same clip, same confidence, same seed; only the crop-scale rule differs.
+
+| Arm | Pose recall | Max upscale |
+|---|---:|---:|
+| crop sized from detected box height | 87.3 % | 6.44× |
+| crop sized from expected height | 87.4 % | 4.91× |
+
+**Null result, and a real one:** the two arms produced different crops on 666 of 730
+observations, and pose outcome flipped on 14 — 7 gained, 7 lost. On a clip where the
+height model agrees with the detected box to 4 %, sizing the crop from geometry changes
+nothing. Its one measurable effect is clamping the maximum upscale, which is worth keeping
+as a guard against over-magnifying a truncated box, but it is not a recall improvement and
+should not be presented as one.
+
+### 8.3 The finding: geometry cannot tell a person from an object
+
+WalkByShop1front produced 17 tracks. Twelve of them sit at **the same pixel, (286.6,
+146.7) ± 0.1 px**, for 1467 frames combined — one for 28 seconds unbroken. They are a
+mannequin and a poster in a shop window.
+
+| | Tracks | Frames | Pose recall | Median score | Net displacement |
+|---|---:|---:|---:|---:|---:|
+| Static | 12 | 1467 | 5.3 % | 0.38 | 0.00–0.09 m |
+| Moving | 5 | 812 | 30.7 % | 0.82 | 3.75–10.40 m |
+
+Would the geometric gate have caught them? No:
+
+| Object | Observed | Expected | Rel. error | Gate @35 % |
+|---|---:|---:|---:|---|
+| mannequin A | 103.0 px | 97.7 px | 5.5 % | keep |
+| mannequin B | 37.1 px | 38.7 px | 4.1 % | keep |
+| real walker | 118.4 px | 116.2 px | 1.9 % | keep |
+
+> **The height gate is disproven for this failure mode, not merely unproven.** A
+> human-sized object standing on the floor is geometrically *perfect*. The gate rejects
+> things of the wrong size — the chair from run 3a, 77 px where a person should be ~250 px
+> — and is structurally incapable of rejecting a mannequin. Section 5 previously called it
+> "unproven"; that was too generous.
+
+This matters more than a recall percentage: a static false positive inside a restricted
+zone raises a **permanent** intrusion alarm.
+
+### 8.4 The static-object filter
+
+The only signal that separates them is motion. A track is scenery if its net floor
+displacement stays below **0.5 m over any 3 s window**.
+
+Net displacement, not path length — a jittering box accumulates path while going nowhere,
+which is exactly what a mannequin looks like. And measured in metres, so one threshold is
+valid everywhere in the frame; the same test in pixels would mean different things at
+different depths.
+
+Validation:
+
+| Case | Net displacement | Classified |
+|---|---:|---|
+| 2 cm jitter in place | 0.110 m | scenery |
+| walking at 1.4 m/s | 4.200 m | person |
+| pacing ±30 cm | 0.554 m | person |
+
+The filter takes the **maximum** over any window across the whole track, so a person who
+walks in and then stands still remains a person. Only a track that has never moved since
+it appeared is scenery. That distinction is essential here — a motionless intruder is
+precisely who the system exists to catch.
+
+### 8.5 A measurement bug worth recording
+
+Runs 5 and 6 reported 83.8 % and 87.3 % pose recall on the hallway under identical
+settings. The only difference was `--no-video`.
+
+The cause: each skeleton was drawn onto the frame being analysed, so the second person in
+a frame was cropped out of an image with the first person's skeleton painted across them.
+**Writing the video was degrading the results the video displayed.** Drawing now happens
+on a copy, and runs 6 and 7 agree to the digit (87.3 % / 87.4 %).
+
+Two lessons that apply to the rest of the project:
+
+- Annotation must never touch the array the model reads. Draw on a copy, always.
+- Two runs that differ under "identical" settings mean a bug, not noise. The instinct to
+  write it off as variance would have left a silent defect in every video-producing run,
+  and would have made the A/B above unmeasurable.
+
+### 8.6 Additions to the build rules
+
+6. **Intrusion = person + displacement, never detection alone.** A detection that has
+   never moved is scenery regardless of its confidence or its geometry.
+7. **The height gate's job is size, not identity.** Keep it for wrong-sized detections and
+   as an upscale clamp; do not rely on it to remove objects.
+8. **Pose recall doubles for real people** (30.7 % vs 5.3 % on shopfront), so a persistently
+   failing pose is itself weak evidence of a non-person — useful as a secondary signal.
+
+## 9. Reproducing
 
 ```powershell
 uv run python scripts/probe_batch.py --run "test run 1"
@@ -249,6 +400,8 @@ uv run python scripts/probe_yolo_sweep.py --run "test run 3a"
 uv run python scripts/calibrate_scene.py "data/raw/<clip>" --name hallway --width 1.8 --length 8.0 \
     --detections "outputs/reports/test run 3a/yolo_sweep_detections.csv"
 uv run python scripts/probe_floor.py "data/raw/<clip>" --scene hallway --conf 0.10
+uv run python scripts/probe_floor.py "data/raw/Workers walking in hallway of office.mp4" \
+    --scene hallway --conf 0.10 --speed-window 0.40 --run "test run 4"
 ```
 
 Each run writes its report, CSVs, `run_meta.json` and a **frozen copy of the code that

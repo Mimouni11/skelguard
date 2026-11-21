@@ -1,0 +1,6 @@
+clip,scene,frame,frames,height_model,height_crop,boxes,gated,gate_rate,n_tracks,n_scenery,scenery_frames,median_ms_people,in_walk_people,longest_track,pose_found,pose_missed,pose_recall,median_ms,p90_ms,max_ms,in_walk_range,impossible,fps_end_to_end,arm
+Workers walking in hallway of office,hallway,1280x720,948,yes,False,732,2,0.0027,3,0,0,1.594,0.6248,280,637,93,0.8726,1.594,2.622,12.533,0.6248,0.0099,16.09,box-height crop
+Workers walking in hallway of office,hallway,1280x720,948,yes,True,732,2,0.0027,3,0,0,1.594,0.6248,280,638,92,0.874,1.594,2.622,12.533,0.6248,0.0099,15.03,expected-height crop
+WalkByShop1front,shopfront,384x288,2360,none,False,2543,0,0.0,17,12,1467,1.317,0.3534,470,332,2211,0.1306,0.05,2.14,5.634,0.1272,0.0,16.52,box-height crop
+Walk1,caviar_lobby,384x288,612,none,False,98,0,0.0,2,0,0,2.516,0.284,63,54,44,0.551,2.516,4.434,18.072,0.284,0.0617,18.38,box-height crop
+Meet_Crowd,caviar_lobby_2,384x288,492,none,False,95,0,0.0,2,0,0,2.091,0.3289,51,23,72,0.2421,2.091,4.129,5.156,0.3289,0.0,18.72,box-height crop

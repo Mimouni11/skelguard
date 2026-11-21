@@ -1,0 +1,22 @@
+{
+  "video": "C:\\skelguard\\data\\raw\\Walk1.mpg",
+  "scene": "caviar_lobby",
+  "conf": 0.25,
+  "gate_tol": 0.35,
+  "iou": 0.3,
+  "stride": 1,
+  "seed": 0,
+  "frames": 612,
+  "fps_src": 25.0,
+  "height_model": null,
+  "pose": {
+    "model": "full",
+    "conf": 0.5,
+    "target_h": 320,
+    "margin": 0.2,
+    "max_scale": 8.0,
+    "detections": 98,
+    "found": 54,
+    "missed": 44
+  }
+}
