@@ -24,6 +24,9 @@ models/mediapipe/*.tflite
 models/trained/*.pt
 models/trained/*.pth
 models/trained/*.onnx
+# Enrolled gait templates are biometric data under a real name, and they rebuild from
+# data/skeletons in one command. They do not belong in a repository.
+models/trained/gait_template_*.json
 *.engine
 yolov8*.pt
 
