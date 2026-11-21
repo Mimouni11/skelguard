@@ -31,6 +31,17 @@ OUT_FIGURES = OUTPUTS / "figures"
 OUT_REPORTS = OUTPUTS / "reports"
 
 
+def run_dir(base: Path, run: str | None) -> Path:
+    """Sub-folder of an output dir for one named run, e.g. outputs/logs/'test run 1'.
+
+    Keeps each experiment's artefacts together instead of letting successive runs pile
+    into one folder. `run=None` or empty writes straight into `base`.
+    """
+    out = base / run if run else base
+    out.mkdir(parents=True, exist_ok=True)
+    return out
+
+
 def ensure_dirs() -> None:
     """Create every output folder. Safe to call repeatedly."""
     for p in (RAW, DATASETS, SKELETONS, INTERIM, LABELS, CALIB,

@@ -1,0 +1,22 @@
+{
+  "video": "C:\\skelguard\\data\\raw\\WalkByShop1front.mpg",
+  "scene": "shopfront",
+  "conf": 0.25,
+  "gate_tol": 0.35,
+  "iou": 0.3,
+  "stride": 1,
+  "seed": 0,
+  "frames": 2360,
+  "fps_src": 25.0,
+  "height_model": null,
+  "pose": {
+    "model": "full",
+    "conf": 0.5,
+    "target_h": 320,
+    "margin": 0.2,
+    "max_scale": 8.0,
+    "detections": 2543,
+    "found": 332,
+    "missed": 2211
+  }
+}

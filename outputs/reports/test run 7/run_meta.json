@@ -1,0 +1,18 @@
+{
+  "run": "test run 7",
+  "conf": 0.25,
+  "model": "yolov8n.pt",
+  "ab": true,
+  "pairs": {
+    "Workers walking in hallway of office": "hallway",
+    "WalkByShop1front": "shopfront",
+    "Walk1": "caviar_lobby",
+    "Meet_Crowd": "caviar_lobby_2"
+  },
+  "seed": 0,
+  "skipped": [
+    "WalkByShop1front: no height model, A/B arm skipped",
+    "Walk1: no height model, A/B arm skipped",
+    "Meet_Crowd: no height model, A/B arm skipped"
+  ]
+}

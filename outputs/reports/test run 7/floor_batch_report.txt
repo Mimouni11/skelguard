@@ -1,0 +1,34 @@
+======================================================================================================================
+TEST RUN 5 - FLOOR TRACKING ON EVERY CALIBRATED CLIP   conf=0.25 (fixed)  pose=full  seed=0
+======================================================================================================================
+
+[1] DOES THE GEOMETRY HOLD ON EACH CAMERA?
+    clip                          scene           arm                    tracks scenery  med m/s  people  in range  impossible
+    Workers walking in hallway of hallway         box-height crop             3       0     1.59    1.59    62.5%       1.0%
+    Workers walking in hallway of hallway         expected-height crop        3       0     1.59    1.59    62.5%       1.0%
+    WalkByShop1front              shopfront       box-height crop            17      12     0.05    1.32    12.7%       0.0%
+    Walk1                         caviar_lobby    box-height crop             2       0     2.52    2.52    28.4%       6.2%
+    Meet_Crowd                    caviar_lobby_2  box-height crop             2       0     2.09    2.09    32.9%       0.0%
+    `med m/s` is over every track; `people` excludes tracks the static filter
+    called scenery. A large gap between the two means the clip is dominated by
+    objects the detector thinks are people, which is a finding about the clip,
+    not about the calibration. For a fisheye view a wild median is expected.
+
+[2] POSE AND THE GATE
+    clip                          arm                   height model    boxes  gated  pose recall    fps
+    Workers walking in hallway of box-height crop       yes               732      2       87.3%   16.1
+    Workers walking in hallway of expected-height crop  yes               732      2       87.4%   15.0
+    WalkByShop1front              box-height crop       none             2543      0       13.1%   16.5
+    Walk1                         box-height crop       none               98      0       55.1%   18.4
+    Meet_Crowd                    box-height crop       none               95      0       24.2%   18.7
+
+[3] A/B: DOES THE CALIBRATED HEIGHT IMPROVE THE POSE CROP?
+    Same clip, same confidence, same seed. Only the crop-scale rule differs.
+    Workers walking in hallway of office       box=87.3%  expected=87.4%  delta=+0.1%
+    A positive delta means sizing the crop from calibrated geometry beats
+    sizing it from a box that occlusion and frame edges can truncate.
+
+[!] SKIPPED
+    WalkByShop1front: no height model, A/B arm skipped
+    Walk1: no height model, A/B arm skipped
+    Meet_Crowd: no height model, A/B arm skipped

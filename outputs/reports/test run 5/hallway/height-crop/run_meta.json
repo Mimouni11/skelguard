@@ -1,0 +1,28 @@
+{
+  "video": "C:\\skelguard\\data\\raw\\Workers walking in hallway of office.mp4",
+  "scene": "hallway",
+  "conf": 0.25,
+  "gate_tol": 0.35,
+  "iou": 0.3,
+  "stride": 1,
+  "seed": 0,
+  "frames": 948,
+  "fps_src": 25.0,
+  "height_model": {
+    "k": 0.5557508229922683,
+    "y_horizon": 31.230603941003075,
+    "n": 2066,
+    "inlier_rate": 0.9888673765730881,
+    "median_rel_err": 0.0421229216702887
+  },
+  "pose": {
+    "model": "full",
+    "conf": 0.5,
+    "target_h": 320,
+    "margin": 0.2,
+    "max_scale": 8.0,
+    "detections": 730,
+    "found": 612,
+    "missed": 118
+  }
+}

@@ -1,0 +1,45 @@
+============================================================================================
+FLOOR TRACKING + MEDIAPIPE POSE   [test run 6/caviar_lobby_2/box-crop]   Meet_Crowd.mpg
+scene=caviar_lobby_2  384x288 @25.0fps  frames=492  conf=0.25  stride=1
+============================================================================================
+
+[1] GEOMETRIC GATE  (does floor geometry reject what confidence accepts?)
+    disabled: this scene has no height model
+
+[2] TRACKS  (>= 15 frames)
+      id     n   dur_s   path_m   net_m   pose   v_raw   v_kf_m  v_kf_px  kind
+       3    51     4.2    12.86    2.45    18%    1.43     1.56     1.42  person
+       4    25    1.96     8.62     5.1    40%     2.9     2.34     2.39  person
+    path_m is distance travelled including jitter; net_m is how far it
+    actually got. Scenery accumulates path without displacement.
+
+[3] IS THE CALIBRATION BELIEVABLE?  (walking is 0.8-2.0 m/s, speed window = 0.40s)
+    raw                median= 1.64  p90= 4.61  max=  6.33  in walking range= 36.8%  impossible=0.0%
+    kalman in METRES   median= 2.09  p90= 4.13  max=  5.16  in walking range= 32.9%  impossible=0.0%
+    kalman in PIXELS   median= 2.06  p90= 4.15  max=  5.33  in walking range= 30.3%  impossible=0.0%
+    `impossible` (>10 m/s) should be ~0. If it is not, the homography is wrong,
+    or the tracker is swapping identities between people.
+
+[4] WHERE DOES KALMAN BELONG?
+    speed jitter (std of frame-to-frame change):  metres=0.933  pixels=0.977
+    fraction inside walking range:                metres=32.9%  pixels=30.3%
+    Smoothing in pixels assumes constant pixel velocity, which perspective
+    makes false: the same stride covers fewer pixels further away, so the
+    filter fights the geometry and drags the estimate near the horizon.
+    VERDICT: metres
+
+[4b] STATIC-OBJECT FILTER  (net displacement < 0.5 m over any 3s window)
+    scenery: 0 tracks, 0 frames (0.0% of tracked frames)
+    people : 2 tracks, 76 frames
+    A human-sized object standing on the floor is geometrically PERFECT, so
+    the height gate cannot reject it. Only motion separates the two. In a
+    restricted zone a static false positive would alarm forever, so this
+    filter is what makes the intrusion signal usable, not the height gate.
+    speed median  all tracks=2.09 m/s  ->  people only=2.09 m/s
+    in walking range  all=32.9%  ->  people only=32.9%
+
+[5] MEDIAPIPE POSE   found=23  missed=72  recall against kept YOLO boxes=24.2%
+    model=full  target crop height=320px  confidence=0.50
+    Pose recall is relative to kept YOLO detections, not ground truth.
+
+[6] SPEED   492 frames in 21.2s  = 23.3 fps end-to-end (YOLO + pose + homography)

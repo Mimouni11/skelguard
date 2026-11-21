@@ -1,0 +1,822 @@
+clip,frame,t,mode,box_h,box_h_frac,detected,crossing,crop_scale,vis,upscaled_h
+Meet_Crowd,3,0.12,crop,105.0,0.3647,0,0,3.05,,320.0
+Meet_Crowd,9,0.36,crop,100.6,0.3493,0,0,3.18,,320.0
+Meet_Crowd,136,5.44,crop,26.0,0.0901,0,0,8.0,,207.6
+Meet_Crowd,188,7.52,crop,51.4,0.1786,0,0,6.22,,320.0
+Meet_Crowd,190,7.6,crop,44.1,0.1533,0,0,7.25,,320.0
+Meet_Crowd,194,7.76,crop,42.4,0.1471,0,0,7.55,,320.0
+Meet_Crowd,200,8.0,crop,47.3,0.1643,0,0,6.76,,320.0
+Meet_Crowd,211,8.44,crop,48.1,0.1669,0,0,6.66,,320.0
+Meet_Crowd,214,8.56,crop,60.3,0.2094,1,0,5.31,0.873,320.0
+Meet_Crowd,217,8.68,crop,63.4,0.2201,1,0,5.05,0.8,320.0
+Meet_Crowd,231,9.24,crop,33.9,0.1179,0,0,8.0,,271.5
+Meet_Crowd,232,9.28,crop,33.8,0.1175,0,0,8.0,,270.8
+Meet_Crowd,238,9.52,crop,39.2,0.1361,1,0,8.0,0.918,313.7
+Meet_Crowd,239,9.56,crop,41.1,0.1426,0,0,7.79,,320.0
+Meet_Crowd,240,9.6,crop,41.8,0.1451,0,0,7.66,,320.0
+Meet_Crowd,241,9.64,crop,43.6,0.1515,0,0,7.34,,320.0
+Meet_Crowd,242,9.68,crop,42.2,0.1465,0,0,7.59,,320.0
+Meet_Crowd,242,9.68,crop,32.2,0.1119,0,0,8.0,,257.9
+Meet_Crowd,243,9.72,crop,40.5,0.1405,1,0,7.91,0.855,320.0
+Meet_Crowd,244,9.76,crop,40.7,0.1414,0,0,7.86,,320.0
+Meet_Crowd,244,9.76,crop,42.6,0.1479,1,0,7.51,0.771,320.0
+Meet_Crowd,247,9.88,crop,38.7,0.1343,1,0,8.0,0.881,309.4
+Meet_Crowd,247,9.88,crop,45.1,0.1565,1,0,7.1,0.814,320.0
+Meet_Crowd,248,9.92,crop,39.0,0.1355,0,0,8.0,,312.2
+Meet_Crowd,248,9.92,crop,60.7,0.2106,0,0,5.28,,320.0
+Meet_Crowd,249,9.96,crop,38.4,0.1333,1,0,8.0,0.925,307.1
+Meet_Crowd,249,9.96,crop,48.8,0.1696,0,0,6.55,,320.0
+Meet_Crowd,250,10.0,crop,49.8,0.173,1,0,6.42,0.835,320.0
+Meet_Crowd,250,10.0,crop,38.1,0.1322,0,0,8.0,,304.6
+Meet_Crowd,251,10.04,crop,37.8,0.1313,0,0,8.0,,302.5
+Meet_Crowd,257,10.28,crop,39.4,0.1368,0,0,8.0,,315.1
+Meet_Crowd,257,10.28,crop,55.6,0.1932,1,0,5.75,0.882,320.0
+Meet_Crowd,258,10.32,crop,55.6,0.1932,1,0,5.75,0.836,320.0
+Meet_Crowd,259,10.36,crop,56.0,0.1946,0,0,5.71,,320.0
+Meet_Crowd,263,10.52,crop,37.9,0.1317,0,0,8.0,,303.4
+Meet_Crowd,264,10.56,crop,42.7,0.1483,0,0,7.49,,320.0
+Meet_Crowd,264,10.56,crop,64.0,0.2224,0,0,5.0,,320.0
+Meet_Crowd,265,10.6,crop,43.3,0.1503,0,0,7.39,,320.0
+Meet_Crowd,265,10.6,crop,64.5,0.2239,1,0,4.96,0.899,320.0
+Meet_Crowd,266,10.64,crop,47.4,0.1647,0,0,6.75,,320.0
+Meet_Crowd,266,10.64,crop,63.3,0.2197,0,0,5.06,,320.0
+Meet_Crowd,267,10.68,crop,47.6,0.1653,0,0,6.72,,320.0
+Meet_Crowd,268,10.72,crop,48.7,0.169,0,0,6.57,,320.0
+Meet_Crowd,269,10.76,crop,49.2,0.1709,0,0,6.5,,320.0
+Meet_Crowd,270,10.8,crop,47.6,0.1653,1,0,6.72,0.37,320.0
+Meet_Crowd,272,10.88,crop,45.0,0.1562,0,0,7.11,,320.0
+Meet_Crowd,273,10.92,crop,43.2,0.1501,0,0,7.4,,320.0
+Meet_Crowd,274,10.96,crop,42.5,0.1474,0,0,7.54,,320.0
+Meet_Crowd,278,11.12,crop,37.5,0.1301,0,0,8.0,,299.7
+Meet_Crowd,280,11.2,crop,37.1,0.1289,0,0,8.0,,297.0
+Meet_Crowd,282,11.28,crop,40.9,0.1421,0,0,7.82,,320.0
+Meet_Crowd,305,12.2,crop,104.0,0.3612,0,0,3.08,,320.0
+Meet_Crowd,309,12.36,crop,46.7,0.162,0,0,6.86,,320.0
+Meet_Crowd,313,12.52,crop,38.9,0.1352,0,0,8.0,,311.5
+Meet_Crowd,327,13.08,crop,102.3,0.3552,0,0,3.13,,320.0
+Walk1,22,0.88,crop,101.9,0.3539,0,0,3.14,,320.0
+Walk1,53,2.12,crop,40.4,0.1404,0,0,7.91,,320.0
+Walk1,61,2.44,crop,36.6,0.1271,0,0,8.0,,292.9
+Walk1,62,2.48,crop,39.9,0.1386,1,0,8.0,0.837,319.4
+Walk1,63,2.52,crop,41.7,0.1449,1,0,7.67,0.921,320.0
+Walk1,64,2.56,crop,45.6,0.1584,0,0,7.01,,320.0
+Walk1,65,2.6,crop,47.4,0.1648,0,0,6.74,,320.0
+Walk1,66,2.64,crop,48.9,0.1696,0,0,6.55,,320.0
+Walk1,67,2.68,crop,50.4,0.1749,1,0,6.35,0.874,320.0
+Walk1,68,2.72,crop,49.4,0.1714,0,0,6.48,,320.0
+Walk1,69,2.76,crop,49.8,0.1728,1,0,6.43,0.959,320.0
+Walk1,70,2.8,crop,47.3,0.1644,1,0,6.76,0.868,320.0
+Walk1,71,2.84,crop,43.8,0.1521,1,0,7.3,0.817,320.0
+Walk1,72,2.88,crop,36.2,0.1258,1,0,8.0,0.814,289.9
+Walk1,73,2.92,crop,32.6,0.1132,1,0,8.0,0.828,260.9
+Walk1,74,2.96,crop,39.3,0.1366,1,0,8.0,0.816,314.8
+Walk1,75,3.0,crop,43.2,0.1501,1,1,7.4,0.846,320.0
+Walk1,75,3.0,crop,45.0,0.1563,0,1,7.11,,320.0
+Walk1,76,3.04,crop,42.3,0.147,1,0,7.56,0.917,320.0
+Walk1,77,3.08,crop,39.7,0.1378,0,0,8.0,,317.6
+Walk1,78,3.12,crop,40.8,0.1416,0,0,7.85,,320.0
+Walk1,79,3.16,crop,42.7,0.1481,1,0,7.5,0.826,320.0
+Walk1,80,3.2,crop,45.0,0.1564,1,0,7.11,0.932,320.0
+Walk1,81,3.24,crop,46.5,0.1613,1,0,6.89,0.927,320.0
+Walk1,82,3.28,crop,47.9,0.1662,0,0,6.68,,320.0
+Walk1,83,3.32,crop,49.3,0.1711,1,0,6.49,0.959,320.0
+Walk1,84,3.36,crop,50.2,0.1743,0,0,6.37,,320.0
+Walk1,85,3.4,crop,48.1,0.1669,1,0,6.66,0.956,320.0
+Walk1,86,3.44,crop,46.0,0.1598,1,0,6.95,0.985,320.0
+Walk1,87,3.48,crop,43.6,0.1515,1,0,7.33,0.99,320.0
+Walk1,88,3.52,crop,42.0,0.1458,1,0,7.62,0.918,320.0
+Walk1,89,3.56,crop,40.8,0.1417,1,0,7.84,0.978,320.0
+Walk1,90,3.6,crop,38.4,0.1333,1,0,8.0,0.971,307.0
+Walk1,91,3.64,crop,37.2,0.1292,1,0,8.0,0.962,297.6
+Walk1,92,3.68,crop,37.5,0.1302,1,0,8.0,0.968,300.1
+Walk1,93,3.72,crop,38.8,0.1347,1,0,8.0,0.968,310.4
+Walk1,94,3.76,crop,41.0,0.1424,1,0,7.8,0.962,320.0
+Walk1,95,3.8,crop,41.7,0.1447,1,0,7.68,0.967,320.0
+Walk1,96,3.84,crop,41.8,0.1452,1,0,7.65,0.949,320.0
+Walk1,97,3.88,crop,42.2,0.1467,1,0,7.57,0.968,320.0
+Walk1,98,3.92,crop,41.0,0.1424,1,0,7.8,0.939,320.0
+Walk1,101,4.04,crop,41.0,0.1422,1,0,7.81,0.962,320.0
+Walk1,107,4.28,crop,41.4,0.1436,1,0,7.74,0.96,320.0
+Walk1,116,4.64,crop,41.2,0.1431,1,0,7.76,0.961,320.0
+Walk1,117,4.68,crop,42.8,0.1487,1,0,7.47,0.947,320.0
+Walk1,118,4.72,crop,39.6,0.1376,1,0,8.0,0.909,317.1
+Walk1,119,4.76,crop,38.6,0.1339,1,0,8.0,0.915,308.5
+Walk1,120,4.8,crop,35.8,0.1242,1,0,8.0,0.954,286.2
+Walk1,121,4.84,crop,36.9,0.128,1,0,8.0,0.885,294.9
+Walk1,122,4.88,crop,36.3,0.126,0,0,8.0,,290.3
+Walk1,123,4.92,crop,38.9,0.1349,0,0,8.0,,310.9
+Walk1,124,4.96,crop,40.8,0.1415,0,0,7.85,,320.0
+Walk1,125,5.0,crop,42.4,0.1472,0,0,7.55,,320.0
+Walk1,126,5.04,crop,43.7,0.1517,0,0,7.32,,320.0
+Walk1,127,5.08,crop,44.8,0.1555,0,0,7.14,,320.0
+Walk1,128,5.12,crop,45.2,0.157,0,0,7.08,,320.0
+Walk1,129,5.16,crop,43.8,0.1521,0,0,7.3,,320.0
+Walk1,130,5.2,crop,42.6,0.148,0,0,7.51,,320.0
+Walk1,131,5.24,crop,39.6,0.1374,0,0,8.0,,316.5
+Walk1,132,5.28,crop,39.6,0.1374,0,0,8.0,,316.5
+Walk1,133,5.32,crop,37.3,0.1295,0,0,8.0,,298.5
+Walk1,134,5.36,crop,34.8,0.1208,0,0,8.0,,278.3
+Walk1,135,5.4,crop,32.6,0.1132,0,0,8.0,,260.8
+Walk1,138,5.52,crop,28.6,0.0995,0,0,8.0,,229.2
+Walk1,140,5.6,crop,30.7,0.1066,0,0,8.0,,245.7
+Walk1,236,9.44,crop,109.2,0.3792,0,0,2.93,,320.0
+Walk1,296,11.84,crop,43.8,0.152,1,0,7.31,0.869,320.0
+Walk1,297,11.88,crop,104.6,0.3632,0,0,3.06,,320.0
+Walk1,298,11.92,crop,107.6,0.3737,0,0,2.97,,320.0
+Walk1,312,12.48,crop,28.8,0.0999,1,0,8.0,0.866,230.3
+Walk1,313,12.52,crop,32.1,0.1113,1,0,8.0,0.794,256.5
+Walk1,314,12.56,crop,29.8,0.1034,1,0,8.0,0.831,238.1
+Walk1,318,12.72,crop,32.0,0.1112,1,0,8.0,0.809,256.2
+Walk1,319,12.76,crop,29.1,0.1011,1,0,8.0,0.789,233.0
+Walk1,327,13.08,crop,29.5,0.1024,1,0,8.0,0.903,235.9
+Walk1,330,13.2,crop,31.8,0.1103,1,0,8.0,0.76,254.1
+Walk1,336,13.44,crop,61.1,0.2123,1,1,5.23,0.852,320.0
+Walk1,336,13.44,crop,26.9,0.0934,0,1,8.0,,215.3
+Walk1,435,17.4,crop,116.7,0.4053,0,0,2.74,,320.0
+Walk1,552,22.08,crop,103.2,0.3585,0,0,3.1,,320.0
+Workers walking in hallway of office,118,4.72,crop,375.7,0.5218,0,0,1.0,,375.7
+Workers walking in hallway of office,119,4.76,crop,377.5,0.5243,0,0,1.0,,377.5
+Workers walking in hallway of office,127,5.08,crop,372.6,0.5175,1,0,1.0,0.647,372.6
+Workers walking in hallway of office,133,5.32,crop,358.4,0.4977,1,0,1.0,0.716,358.4
+Workers walking in hallway of office,134,5.36,crop,365.6,0.5078,1,0,1.0,0.71,365.6
+Workers walking in hallway of office,135,5.4,crop,368.8,0.5122,1,0,1.0,0.802,368.8
+Workers walking in hallway of office,136,5.44,crop,377.7,0.5246,1,0,1.0,0.875,377.7
+Workers walking in hallway of office,137,5.48,crop,374.4,0.52,1,0,1.0,0.842,374.4
+Workers walking in hallway of office,139,5.56,crop,390.5,0.5424,0,0,1.0,,390.5
+Workers walking in hallway of office,140,5.6,crop,397.9,0.5526,0,0,1.0,,397.9
+Workers walking in hallway of office,141,5.64,crop,393.1,0.546,0,0,1.0,,393.1
+Workers walking in hallway of office,142,5.68,crop,396.9,0.5512,0,0,1.0,,396.9
+Workers walking in hallway of office,143,5.72,crop,392.0,0.5445,0,0,1.0,,392.0
+Workers walking in hallway of office,144,5.76,crop,386.1,0.5363,0,0,1.0,,386.1
+Workers walking in hallway of office,145,5.8,crop,375.5,0.5216,0,0,1.0,,375.5
+Workers walking in hallway of office,146,5.84,crop,364.9,0.5068,1,0,1.0,0.619,364.9
+Workers walking in hallway of office,147,5.88,crop,332.8,0.4622,1,0,1.0,0.593,332.8
+Workers walking in hallway of office,148,5.92,crop,324.8,0.4511,1,0,1.0,0.594,324.8
+Workers walking in hallway of office,149,5.96,crop,311.7,0.4329,1,0,1.03,0.658,320.0
+Workers walking in hallway of office,150,6.0,crop,307.3,0.4268,1,0,1.04,0.776,320.0
+Workers walking in hallway of office,151,6.04,crop,307.7,0.4273,1,0,1.04,0.8,320.0
+Workers walking in hallway of office,152,6.08,crop,314.4,0.4367,1,0,1.02,0.791,320.0
+Workers walking in hallway of office,153,6.12,crop,314.7,0.437,1,0,1.02,0.763,320.0
+Workers walking in hallway of office,154,6.16,crop,314.2,0.4364,1,0,1.02,0.766,320.0
+Workers walking in hallway of office,155,6.2,crop,315.0,0.4375,1,0,1.02,0.75,320.0
+Workers walking in hallway of office,156,6.24,crop,309.2,0.4294,1,0,1.04,0.765,320.0
+Workers walking in hallway of office,157,6.28,crop,304.2,0.4225,1,0,1.05,0.811,320.0
+Workers walking in hallway of office,158,6.32,crop,300.9,0.418,1,0,1.06,0.789,320.0
+Workers walking in hallway of office,159,6.36,crop,282.6,0.3925,1,0,1.13,0.823,320.0
+Workers walking in hallway of office,160,6.4,crop,261.7,0.3635,1,0,1.22,0.833,320.0
+Workers walking in hallway of office,161,6.44,crop,260.4,0.3617,1,0,1.23,0.818,320.0
+Workers walking in hallway of office,162,6.48,crop,260.5,0.3618,1,0,1.23,0.834,320.0
+Workers walking in hallway of office,163,6.52,crop,261.4,0.363,1,0,1.22,0.748,320.0
+Workers walking in hallway of office,164,6.56,crop,264.0,0.3667,1,0,1.21,0.807,320.0
+Workers walking in hallway of office,165,6.6,crop,266.4,0.37,1,0,1.2,0.801,320.0
+Workers walking in hallway of office,166,6.64,crop,267.5,0.3715,1,0,1.2,0.798,320.0
+Workers walking in hallway of office,167,6.68,crop,268.6,0.373,1,0,1.19,0.745,320.0
+Workers walking in hallway of office,168,6.72,crop,267.5,0.3715,1,0,1.2,0.733,320.0
+Workers walking in hallway of office,169,6.76,crop,261.9,0.3638,1,0,1.22,0.779,320.0
+Workers walking in hallway of office,170,6.8,crop,261.8,0.3636,1,0,1.22,0.71,320.0
+Workers walking in hallway of office,171,6.84,crop,247.7,0.3441,1,0,1.29,0.769,320.0
+Workers walking in hallway of office,172,6.88,crop,245.6,0.341,1,0,1.3,0.785,320.0
+Workers walking in hallway of office,175,7.0,crop,231.8,0.3219,1,0,1.38,0.839,320.0
+Workers walking in hallway of office,176,7.04,crop,230.2,0.3198,1,0,1.39,0.916,320.0
+Workers walking in hallway of office,185,7.4,crop,207.4,0.2881,1,0,1.54,0.902,320.0
+Workers walking in hallway of office,186,7.44,crop,206.0,0.2861,1,0,1.55,0.835,320.0
+Workers walking in hallway of office,187,7.48,crop,208.9,0.2902,1,0,1.53,0.839,320.0
+Workers walking in hallway of office,188,7.52,crop,209.2,0.2905,1,0,1.53,0.781,320.0
+Workers walking in hallway of office,189,7.56,crop,208.8,0.29,1,0,1.53,0.838,320.0
+Workers walking in hallway of office,190,7.6,crop,210.5,0.2924,1,0,1.52,0.802,320.0
+Workers walking in hallway of office,191,7.64,crop,209.3,0.2907,1,0,1.53,0.704,320.0
+Workers walking in hallway of office,192,7.68,crop,206.4,0.2867,1,0,1.55,0.71,320.0
+Workers walking in hallway of office,193,7.72,crop,203.9,0.2832,1,0,1.57,0.63,320.0
+Workers walking in hallway of office,194,7.76,crop,198.7,0.2759,1,0,1.61,0.71,320.0
+Workers walking in hallway of office,195,7.8,crop,192.1,0.2668,1,0,1.67,0.69,320.0
+Workers walking in hallway of office,196,7.84,crop,189.0,0.2625,1,0,1.69,0.771,320.0
+Workers walking in hallway of office,197,7.88,crop,184.3,0.256,1,0,1.74,0.903,320.0
+Workers walking in hallway of office,198,7.92,crop,183.4,0.2548,1,0,1.74,0.914,320.0
+Workers walking in hallway of office,199,7.96,crop,185.5,0.2576,1,0,1.73,0.766,320.0
+Workers walking in hallway of office,200,8.0,crop,184.4,0.2561,1,0,1.74,0.825,320.0
+Workers walking in hallway of office,201,8.04,crop,185.3,0.2573,1,0,1.73,0.798,320.0
+Workers walking in hallway of office,202,8.08,crop,187.5,0.2604,1,0,1.71,0.661,320.0
+Workers walking in hallway of office,203,8.12,crop,185.6,0.2577,1,0,1.72,0.747,320.0
+Workers walking in hallway of office,204,8.16,crop,184.7,0.2565,1,0,1.73,0.682,320.0
+Workers walking in hallway of office,205,8.2,crop,183.3,0.2546,1,0,1.75,0.797,320.0
+Workers walking in hallway of office,206,8.24,crop,186.0,0.2584,1,0,1.72,0.833,320.0
+Workers walking in hallway of office,207,8.28,crop,171.8,0.2387,1,0,1.86,0.784,320.0
+Workers walking in hallway of office,208,8.32,crop,172.2,0.2391,1,0,1.86,0.849,320.0
+Workers walking in hallway of office,209,8.36,crop,171.0,0.2375,1,0,1.87,0.909,320.0
+Workers walking in hallway of office,210,8.4,crop,168.5,0.2341,1,0,1.9,0.692,320.0
+Workers walking in hallway of office,211,8.44,crop,165.2,0.2294,1,0,1.94,0.801,320.0
+Workers walking in hallway of office,212,8.48,crop,167.2,0.2322,1,0,1.91,0.782,320.0
+Workers walking in hallway of office,213,8.52,crop,165.1,0.2294,1,0,1.94,0.693,320.0
+Workers walking in hallway of office,214,8.56,crop,165.5,0.2298,1,0,1.93,0.748,320.0
+Workers walking in hallway of office,215,8.6,crop,166.3,0.2309,1,0,1.92,0.581,320.0
+Workers walking in hallway of office,216,8.64,crop,164.0,0.2278,1,0,1.95,0.638,320.0
+Workers walking in hallway of office,217,8.68,crop,163.1,0.2265,1,0,1.96,0.625,320.0
+Workers walking in hallway of office,218,8.72,crop,162.2,0.2253,1,0,1.97,0.642,320.0
+Workers walking in hallway of office,219,8.76,crop,159.5,0.2215,1,0,2.01,0.755,320.0
+Workers walking in hallway of office,220,8.8,crop,155.7,0.2163,1,0,2.05,0.768,320.0
+Workers walking in hallway of office,221,8.84,crop,156.5,0.2174,1,0,2.04,0.744,320.0
+Workers walking in hallway of office,222,8.88,crop,153.9,0.2137,1,0,2.08,0.679,320.0
+Workers walking in hallway of office,223,8.92,crop,157.8,0.2192,1,0,2.03,0.765,320.0
+Workers walking in hallway of office,224,8.96,crop,157.5,0.2188,1,0,2.03,0.767,320.0
+Workers walking in hallway of office,225,9.0,crop,151.6,0.2106,1,0,2.11,0.866,320.0
+Workers walking in hallway of office,226,9.04,crop,151.4,0.2103,0,0,2.11,,320.0
+Workers walking in hallway of office,227,9.08,crop,151.9,0.2109,0,0,2.11,,320.0
+Workers walking in hallway of office,228,9.12,crop,153.1,0.2126,1,0,2.09,0.861,320.0
+Workers walking in hallway of office,229,9.16,crop,150.2,0.2086,1,0,2.13,0.873,320.0
+Workers walking in hallway of office,230,9.2,crop,148.4,0.2062,0,0,2.16,,320.0
+Workers walking in hallway of office,231,9.24,crop,149.6,0.2077,1,0,2.14,0.866,320.0
+Workers walking in hallway of office,234,9.36,crop,141.3,0.1962,1,0,2.27,0.795,320.0
+Workers walking in hallway of office,235,9.4,crop,145.1,0.2015,1,0,2.21,0.686,320.0
+Workers walking in hallway of office,236,9.44,crop,146.2,0.203,1,0,2.19,0.781,320.0
+Workers walking in hallway of office,237,9.48,crop,146.3,0.2031,1,0,2.19,0.762,320.0
+Workers walking in hallway of office,238,9.52,crop,143.6,0.1994,1,0,2.23,0.771,320.0
+Workers walking in hallway of office,239,9.56,crop,142.4,0.1977,1,0,2.25,0.708,320.0
+Workers walking in hallway of office,240,9.6,crop,143.3,0.1991,0,0,2.23,,320.0
+Workers walking in hallway of office,241,9.64,crop,141.0,0.1959,0,0,2.27,,320.0
+Workers walking in hallway of office,242,9.68,crop,141.8,0.197,1,0,2.26,0.81,320.0
+Workers walking in hallway of office,243,9.72,crop,141.9,0.1971,1,0,2.26,0.849,320.0
+Workers walking in hallway of office,244,9.76,crop,141.2,0.1961,0,0,2.27,,320.0
+Workers walking in hallway of office,245,9.8,crop,140.4,0.195,0,0,2.28,,320.0
+Workers walking in hallway of office,246,9.84,crop,135.7,0.1885,1,0,2.36,0.765,320.0
+Workers walking in hallway of office,247,9.88,crop,137.4,0.1908,1,0,2.33,0.768,320.0
+Workers walking in hallway of office,248,9.92,crop,135.8,0.1886,1,0,2.36,0.781,320.0
+Workers walking in hallway of office,249,9.96,crop,133.4,0.1853,1,0,2.4,0.78,320.0
+Workers walking in hallway of office,250,10.0,crop,129.2,0.1795,1,0,2.48,0.743,320.0
+Workers walking in hallway of office,251,10.04,crop,129.9,0.1804,1,0,2.46,0.851,320.0
+Workers walking in hallway of office,252,10.08,crop,132.9,0.1846,1,0,2.41,0.797,320.0
+Workers walking in hallway of office,253,10.12,crop,133.8,0.1859,1,0,2.39,0.824,320.0
+Workers walking in hallway of office,254,10.16,crop,133.8,0.1858,1,0,2.39,0.834,320.0
+Workers walking in hallway of office,255,10.2,crop,132.1,0.1835,1,0,2.42,0.805,320.0
+Workers walking in hallway of office,256,10.24,crop,129.4,0.1798,1,0,2.47,0.915,320.0
+Workers walking in hallway of office,257,10.28,crop,130.8,0.1817,1,0,2.45,0.849,320.0
+Workers walking in hallway of office,258,10.32,crop,129.8,0.1802,1,0,2.47,0.892,320.0
+Workers walking in hallway of office,259,10.36,crop,127.1,0.1766,1,0,2.52,0.842,320.0
+Workers walking in hallway of office,260,10.4,crop,127.2,0.1766,1,0,2.52,0.808,320.0
+Workers walking in hallway of office,261,10.44,crop,125.8,0.1748,1,0,2.54,0.835,320.0
+Workers walking in hallway of office,262,10.48,crop,123.9,0.1722,1,0,2.58,0.771,320.0
+Workers walking in hallway of office,263,10.52,crop,122.8,0.1705,1,0,2.61,0.793,320.0
+Workers walking in hallway of office,264,10.56,crop,124.5,0.1729,1,0,2.57,0.664,320.0
+Workers walking in hallway of office,265,10.6,crop,123.2,0.1711,1,0,2.6,0.781,320.0
+Workers walking in hallway of office,266,10.64,crop,121.1,0.1682,1,0,2.64,0.806,320.0
+Workers walking in hallway of office,267,10.68,crop,123.7,0.1718,1,0,2.59,0.833,320.0
+Workers walking in hallway of office,268,10.72,crop,120.6,0.1675,0,0,2.65,,320.0
+Workers walking in hallway of office,269,10.76,crop,118.2,0.1642,0,0,2.71,,320.0
+Workers walking in hallway of office,270,10.8,crop,121.2,0.1684,0,0,2.64,,320.0
+Workers walking in hallway of office,271,10.84,crop,121.2,0.1684,0,0,2.64,,320.0
+Workers walking in hallway of office,272,10.88,crop,118.9,0.1651,0,0,2.69,,320.0
+Workers walking in hallway of office,273,10.92,crop,117.1,0.1627,0,0,2.73,,320.0
+Workers walking in hallway of office,274,10.96,crop,114.2,0.1586,1,0,2.8,0.755,320.0
+Workers walking in hallway of office,275,11.0,crop,114.3,0.1587,0,0,2.8,,320.0
+Workers walking in hallway of office,276,11.04,crop,113.9,0.1582,0,0,2.81,,320.0
+Workers walking in hallway of office,277,11.08,crop,116.2,0.1614,1,0,2.75,0.816,320.0
+Workers walking in hallway of office,278,11.12,crop,116.1,0.1613,1,0,2.76,0.834,320.0
+Workers walking in hallway of office,279,11.16,crop,115.6,0.1606,1,0,2.77,0.8,320.0
+Workers walking in hallway of office,280,11.2,crop,114.8,0.1595,1,0,2.79,0.84,320.0
+Workers walking in hallway of office,281,11.24,crop,113.7,0.1579,1,0,2.81,0.791,320.0
+Workers walking in hallway of office,282,11.28,crop,112.5,0.1563,0,0,2.84,,320.0
+Workers walking in hallway of office,283,11.32,crop,112.4,0.1561,0,0,2.85,,320.0
+Workers walking in hallway of office,284,11.36,crop,113.7,0.1579,0,0,2.82,,320.0
+Workers walking in hallway of office,296,11.84,crop,104.8,0.1455,0,0,3.05,,320.0
+Workers walking in hallway of office,300,12.0,crop,103.9,0.1443,0,0,3.08,,320.0
+Workers walking in hallway of office,302,12.08,crop,102.5,0.1424,0,0,3.12,,320.0
+Workers walking in hallway of office,330,13.2,crop,88.5,0.1229,0,0,3.61,,320.0
+Workers walking in hallway of office,381,15.24,crop,75.1,0.1042,0,0,4.26,,320.0
+Workers walking in hallway of office,382,15.28,crop,75.7,0.1052,0,0,4.23,,320.0
+Workers walking in hallway of office,468,18.72,crop,69.2,0.0962,0,0,4.62,,320.0
+Workers walking in hallway of office,469,18.76,crop,71.0,0.0986,0,0,4.51,,320.0
+Workers walking in hallway of office,470,18.8,crop,71.7,0.0995,0,0,4.47,,320.0
+Workers walking in hallway of office,471,18.84,crop,71.3,0.099,0,0,4.49,,320.0
+Workers walking in hallway of office,472,18.88,crop,72.0,0.1,1,0,4.44,0.714,320.0
+Workers walking in hallway of office,473,18.92,crop,70.9,0.0985,1,0,4.51,0.853,320.0
+Workers walking in hallway of office,474,18.96,crop,70.1,0.0974,1,0,4.57,0.872,320.0
+Workers walking in hallway of office,475,19.0,crop,68.4,0.095,0,0,4.68,,320.0
+Workers walking in hallway of office,476,19.04,crop,68.1,0.0946,1,0,4.7,0.719,320.0
+Workers walking in hallway of office,477,19.08,crop,69.6,0.0967,1,0,4.6,0.744,320.0
+Workers walking in hallway of office,478,19.12,crop,69.7,0.0968,0,0,4.59,,320.0
+Workers walking in hallway of office,479,19.16,crop,70.3,0.0976,1,0,4.55,0.884,320.0
+Workers walking in hallway of office,480,19.2,crop,70.8,0.0983,1,0,4.52,0.928,320.0
+Workers walking in hallway of office,481,19.24,crop,70.4,0.0978,1,0,4.55,0.944,320.0
+Workers walking in hallway of office,482,19.28,crop,71.3,0.099,1,0,4.49,0.939,320.0
+Workers walking in hallway of office,483,19.32,crop,71.2,0.0989,1,0,4.49,0.96,320.0
+Workers walking in hallway of office,484,19.36,crop,75.4,0.1048,1,0,4.24,0.93,320.0
+Workers walking in hallway of office,485,19.4,crop,76.8,0.1067,1,0,4.17,0.945,320.0
+Workers walking in hallway of office,486,19.44,crop,78.3,0.1087,1,0,4.09,0.968,320.0
+Workers walking in hallway of office,487,19.48,crop,74.9,0.104,1,0,4.27,0.971,320.0
+Workers walking in hallway of office,488,19.52,crop,75.1,0.1044,1,0,4.26,0.969,320.0
+Workers walking in hallway of office,489,19.56,crop,74.9,0.104,1,0,4.27,0.949,320.0
+Workers walking in hallway of office,490,19.6,crop,75.3,0.1045,1,0,4.25,0.937,320.0
+Workers walking in hallway of office,491,19.64,crop,76.8,0.1067,1,0,4.16,0.954,320.0
+Workers walking in hallway of office,492,19.68,crop,75.7,0.1051,1,0,4.23,0.947,320.0
+Workers walking in hallway of office,493,19.72,crop,76.0,0.1055,1,0,4.21,0.953,320.0
+Workers walking in hallway of office,494,19.76,crop,76.7,0.1065,1,0,4.17,0.967,320.0
+Workers walking in hallway of office,495,19.8,crop,77.1,0.1071,1,0,4.15,0.947,320.0
+Workers walking in hallway of office,496,19.84,crop,78.0,0.1083,1,0,4.1,0.948,320.0
+Workers walking in hallway of office,497,19.88,crop,78.5,0.109,1,0,4.08,0.951,320.0
+Workers walking in hallway of office,498,19.92,crop,78.7,0.1093,1,0,4.07,0.955,320.0
+Workers walking in hallway of office,499,19.96,crop,78.2,0.1086,1,0,4.09,0.963,320.0
+Workers walking in hallway of office,500,20.0,crop,77.8,0.1081,1,0,4.11,0.969,320.0
+Workers walking in hallway of office,501,20.04,crop,78.2,0.1086,1,0,4.09,0.96,320.0
+Workers walking in hallway of office,502,20.08,crop,78.5,0.109,1,0,4.08,0.938,320.0
+Workers walking in hallway of office,503,20.12,crop,78.6,0.1092,1,0,4.07,0.944,320.0
+Workers walking in hallway of office,504,20.16,crop,78.8,0.1094,1,0,4.06,0.958,320.0
+Workers walking in hallway of office,505,20.2,crop,78.4,0.1089,1,0,4.08,0.952,320.0
+Workers walking in hallway of office,506,20.24,crop,78.4,0.1089,1,0,4.08,0.94,320.0
+Workers walking in hallway of office,507,20.28,crop,79.1,0.1099,1,0,4.04,0.956,320.0
+Workers walking in hallway of office,508,20.32,crop,81.4,0.113,1,0,3.93,0.949,320.0
+Workers walking in hallway of office,509,20.36,crop,81.4,0.113,1,0,3.93,0.945,320.0
+Workers walking in hallway of office,510,20.4,crop,81.5,0.1132,1,0,3.93,0.944,320.0
+Workers walking in hallway of office,511,20.44,crop,82.6,0.1147,1,0,3.88,0.952,320.0
+Workers walking in hallway of office,512,20.48,crop,83.5,0.1159,1,0,3.83,0.963,320.0
+Workers walking in hallway of office,513,20.52,crop,84.2,0.1169,1,0,3.8,0.972,320.0
+Workers walking in hallway of office,514,20.56,crop,84.6,0.1175,1,0,3.78,0.973,320.0
+Workers walking in hallway of office,515,20.6,crop,84.4,0.1172,1,0,3.79,0.974,320.0
+Workers walking in hallway of office,516,20.64,crop,83.9,0.1165,1,0,3.81,0.969,320.0
+Workers walking in hallway of office,517,20.68,crop,83.9,0.1166,1,0,3.81,0.968,320.0
+Workers walking in hallway of office,518,20.72,crop,83.0,0.1153,1,0,3.86,0.965,320.0
+Workers walking in hallway of office,519,20.76,crop,82.9,0.1151,1,0,3.86,0.961,320.0
+Workers walking in hallway of office,520,20.8,crop,82.7,0.1149,1,0,3.87,0.965,320.0
+Workers walking in hallway of office,521,20.84,crop,82.9,0.1152,1,0,3.86,0.97,320.0
+Workers walking in hallway of office,522,20.88,crop,83.1,0.1154,1,0,3.85,0.967,320.0
+Workers walking in hallway of office,523,20.92,crop,83.4,0.1158,1,0,3.84,0.964,320.0
+Workers walking in hallway of office,524,20.96,crop,83.7,0.1162,1,0,3.83,0.952,320.0
+Workers walking in hallway of office,525,21.0,crop,84.2,0.1169,1,0,3.8,0.959,320.0
+Workers walking in hallway of office,526,21.04,crop,85.4,0.1187,1,0,3.75,0.966,320.0
+Workers walking in hallway of office,527,21.08,crop,86.1,0.1197,1,0,3.71,0.965,320.0
+Workers walking in hallway of office,528,21.12,crop,86.1,0.1195,1,0,3.72,0.971,320.0
+Workers walking in hallway of office,529,21.16,crop,85.8,0.1191,1,0,3.73,0.972,320.0
+Workers walking in hallway of office,530,21.2,crop,85.7,0.119,1,0,3.74,0.957,320.0
+Workers walking in hallway of office,531,21.24,crop,84.6,0.1175,1,0,3.78,0.957,320.0
+Workers walking in hallway of office,532,21.28,crop,85.1,0.1182,1,0,3.76,0.952,320.0
+Workers walking in hallway of office,533,21.32,crop,85.3,0.1185,1,0,3.75,0.932,320.0
+Workers walking in hallway of office,534,21.36,crop,84.7,0.1176,1,0,3.78,0.945,320.0
+Workers walking in hallway of office,535,21.4,crop,84.4,0.1172,1,0,3.79,0.936,320.0
+Workers walking in hallway of office,536,21.44,crop,85.0,0.118,1,0,3.77,0.949,320.0
+Workers walking in hallway of office,537,21.48,crop,85.2,0.1184,1,0,3.75,0.958,320.0
+Workers walking in hallway of office,538,21.52,crop,85.9,0.1193,1,0,3.73,0.962,320.0
+Workers walking in hallway of office,539,21.56,crop,86.8,0.1206,1,0,3.68,0.968,320.0
+Workers walking in hallway of office,540,21.6,crop,87.2,0.1211,1,0,3.67,0.972,320.0
+Workers walking in hallway of office,541,21.64,crop,87.1,0.121,1,0,3.67,0.976,320.0
+Workers walking in hallway of office,542,21.68,crop,87.7,0.1218,1,0,3.65,0.97,320.0
+Workers walking in hallway of office,543,21.72,crop,86.5,0.1202,1,0,3.7,0.961,320.0
+Workers walking in hallway of office,544,21.76,crop,85.3,0.1185,1,0,3.75,0.968,320.0
+Workers walking in hallway of office,545,21.8,crop,85.4,0.1186,1,0,3.75,0.968,320.0
+Workers walking in hallway of office,546,21.84,crop,85.3,0.1184,1,0,3.75,0.963,320.0
+Workers walking in hallway of office,547,21.88,crop,85.9,0.1193,1,0,3.73,0.958,320.0
+Workers walking in hallway of office,548,21.92,crop,86.2,0.1198,1,0,3.71,0.969,320.0
+Workers walking in hallway of office,549,21.96,crop,86.8,0.1206,1,0,3.69,0.964,320.0
+Workers walking in hallway of office,550,22.0,crop,87.4,0.1214,1,0,3.66,0.971,320.0
+Workers walking in hallway of office,551,22.04,crop,88.3,0.1226,1,0,3.62,0.963,320.0
+Workers walking in hallway of office,552,22.08,crop,89.2,0.1239,1,0,3.59,0.967,320.0
+Workers walking in hallway of office,553,22.12,crop,90.4,0.1256,1,0,3.54,0.97,320.0
+Workers walking in hallway of office,554,22.16,crop,91.2,0.1266,1,0,3.51,0.971,320.0
+Workers walking in hallway of office,555,22.2,crop,90.8,0.1261,1,0,3.53,0.969,320.0
+Workers walking in hallway of office,556,22.24,crop,90.2,0.1252,1,0,3.55,0.955,320.0
+Workers walking in hallway of office,557,22.28,crop,89.9,0.1248,1,0,3.56,0.964,320.0
+Workers walking in hallway of office,558,22.32,crop,90.0,0.125,1,0,3.56,0.956,320.0
+Workers walking in hallway of office,559,22.36,crop,89.3,0.1241,1,0,3.58,0.963,320.0
+Workers walking in hallway of office,560,22.4,crop,90.0,0.125,1,0,3.56,0.961,320.0
+Workers walking in hallway of office,561,22.44,crop,91.1,0.1266,1,0,3.51,0.945,320.0
+Workers walking in hallway of office,562,22.48,crop,90.1,0.1251,1,0,3.55,0.943,320.0
+Workers walking in hallway of office,563,22.52,crop,90.6,0.1258,1,0,3.53,0.951,320.0
+Workers walking in hallway of office,564,22.56,crop,93.2,0.1294,1,0,3.44,0.957,320.0
+Workers walking in hallway of office,565,22.6,crop,93.3,0.1296,1,0,3.43,0.967,320.0
+Workers walking in hallway of office,566,22.64,crop,95.0,0.132,1,0,3.37,0.97,320.0
+Workers walking in hallway of office,567,22.68,crop,97.2,0.135,1,0,3.29,0.967,320.0
+Workers walking in hallway of office,568,22.72,crop,97.7,0.1357,1,0,3.28,0.964,320.0
+Workers walking in hallway of office,569,22.76,crop,97.3,0.1351,1,0,3.29,0.96,320.0
+Workers walking in hallway of office,570,22.8,crop,96.7,0.1343,1,0,3.31,0.951,320.0
+Workers walking in hallway of office,571,22.84,crop,97.4,0.1353,1,0,3.28,0.962,320.0
+Workers walking in hallway of office,572,22.88,crop,97.6,0.1356,1,0,3.28,0.961,320.0
+Workers walking in hallway of office,573,22.92,crop,98.0,0.1361,1,0,3.27,0.954,320.0
+Workers walking in hallway of office,574,22.96,crop,100.5,0.1396,1,0,3.18,0.959,320.0
+Workers walking in hallway of office,575,23.0,crop,100.2,0.1392,1,0,3.19,0.952,320.0
+Workers walking in hallway of office,576,23.04,crop,98.3,0.1365,1,0,3.26,0.962,320.0
+Workers walking in hallway of office,577,23.08,crop,101.7,0.1412,1,0,3.15,0.964,320.0
+Workers walking in hallway of office,578,23.12,crop,101.9,0.1415,1,0,3.14,0.97,320.0
+Workers walking in hallway of office,579,23.16,crop,103.1,0.1432,1,0,3.1,0.968,320.0
+Workers walking in hallway of office,580,23.2,crop,105.0,0.1459,1,0,3.05,0.964,320.0
+Workers walking in hallway of office,581,23.24,crop,104.8,0.1456,1,0,3.05,0.959,320.0
+Workers walking in hallway of office,582,23.28,crop,104.2,0.1447,1,0,3.07,0.96,320.0
+Workers walking in hallway of office,583,23.32,crop,104.2,0.1447,1,0,3.07,0.964,320.0
+Workers walking in hallway of office,584,23.36,crop,104.2,0.1448,1,0,3.07,0.948,320.0
+Workers walking in hallway of office,585,23.4,crop,106.6,0.1481,1,0,3.0,0.952,320.0
+Workers walking in hallway of office,586,23.44,crop,109.0,0.1514,1,0,2.94,0.947,320.0
+Workers walking in hallway of office,587,23.48,crop,112.5,0.1562,1,0,2.85,0.955,320.0
+Workers walking in hallway of office,588,23.52,crop,114.2,0.1586,1,0,2.8,0.96,320.0
+Workers walking in hallway of office,589,23.56,crop,116.8,0.1622,1,0,2.74,0.964,320.0
+Workers walking in hallway of office,590,23.6,crop,115.8,0.1609,1,0,2.76,0.976,320.0
+Workers walking in hallway of office,591,23.64,crop,115.8,0.1609,1,0,2.76,0.972,320.0
+Workers walking in hallway of office,592,23.68,crop,122.7,0.1704,1,0,2.61,0.965,320.0
+Workers walking in hallway of office,593,23.72,crop,116.3,0.1616,1,0,2.75,0.961,320.0
+Workers walking in hallway of office,594,23.76,crop,110.5,0.1535,1,0,2.9,0.963,320.0
+Workers walking in hallway of office,595,23.8,crop,113.6,0.1578,1,0,2.82,0.947,320.0
+Workers walking in hallway of office,596,23.84,crop,115.9,0.161,1,0,2.76,0.948,320.0
+Workers walking in hallway of office,597,23.88,crop,111.5,0.1549,1,0,2.87,0.956,320.0
+Workers walking in hallway of office,598,23.92,crop,108.8,0.151,1,0,2.94,0.958,320.0
+Workers walking in hallway of office,599,23.96,crop,108.8,0.1511,1,0,2.94,0.949,320.0
+Workers walking in hallway of office,600,24.0,crop,108.0,0.15,1,0,2.96,0.942,320.0
+Workers walking in hallway of office,601,24.04,crop,109.4,0.1519,1,0,2.93,0.951,320.0
+Workers walking in hallway of office,602,24.08,crop,115.0,0.1597,1,0,2.78,0.964,320.0
+Workers walking in hallway of office,603,24.12,crop,115.2,0.16,1,0,2.78,0.973,320.0
+Workers walking in hallway of office,604,24.16,crop,115.5,0.1604,1,0,2.77,0.972,320.0
+Workers walking in hallway of office,605,24.2,crop,114.0,0.1584,1,0,2.81,0.976,320.0
+Workers walking in hallway of office,606,24.24,crop,112.1,0.1558,1,0,2.85,0.965,320.0
+Workers walking in hallway of office,607,24.28,crop,111.2,0.1544,1,0,2.88,0.969,320.0
+Workers walking in hallway of office,608,24.32,crop,110.4,0.1533,1,0,2.9,0.974,320.0
+Workers walking in hallway of office,609,24.36,crop,109.8,0.1525,1,1,2.92,0.97,320.0
+Workers walking in hallway of office,609,24.36,crop,55.3,0.0768,1,1,5.79,0.764,320.0
+Workers walking in hallway of office,610,24.4,crop,110.2,0.1531,1,1,2.9,0.976,320.0
+Workers walking in hallway of office,610,24.4,crop,56.6,0.0786,0,1,5.66,,320.0
+Workers walking in hallway of office,611,24.44,crop,111.7,0.1552,1,1,2.86,0.966,320.0
+Workers walking in hallway of office,611,24.44,crop,57.0,0.0792,1,1,5.61,0.814,320.0
+Workers walking in hallway of office,612,24.48,crop,115.8,0.1608,1,1,2.76,0.971,320.0
+Workers walking in hallway of office,612,24.48,crop,57.4,0.0797,1,1,5.58,0.868,320.0
+Workers walking in hallway of office,613,24.52,crop,114.3,0.1587,1,1,2.8,0.965,320.0
+Workers walking in hallway of office,613,24.52,crop,56.8,0.0789,1,1,5.63,0.77,320.0
+Workers walking in hallway of office,614,24.56,crop,113.5,0.1576,1,1,2.82,0.973,320.0
+Workers walking in hallway of office,614,24.56,crop,54.8,0.0761,1,1,5.84,0.83,320.0
+Workers walking in hallway of office,615,24.6,crop,117.9,0.1637,1,0,2.71,0.98,320.0
+Workers walking in hallway of office,616,24.64,crop,118.5,0.1646,1,0,2.7,0.982,320.0
+Workers walking in hallway of office,617,24.68,crop,118.9,0.1651,1,0,2.69,0.975,320.0
+Workers walking in hallway of office,618,24.72,crop,120.5,0.1674,1,1,2.66,0.971,320.0
+Workers walking in hallway of office,618,24.72,crop,49.7,0.069,1,1,6.44,0.401,320.0
+Workers walking in hallway of office,619,24.76,crop,122.1,0.1696,1,0,2.62,0.975,320.0
+Workers walking in hallway of office,620,24.8,crop,121.8,0.1691,1,1,2.63,0.965,320.0
+Workers walking in hallway of office,620,24.8,crop,52.8,0.0733,1,1,6.06,0.442,320.0
+Workers walking in hallway of office,621,24.84,crop,122.8,0.1705,1,1,2.61,0.974,320.0
+Workers walking in hallway of office,621,24.84,crop,54.6,0.0758,1,1,5.86,0.441,320.0
+Workers walking in hallway of office,622,24.88,crop,120.9,0.168,1,1,2.65,0.967,320.0
+Workers walking in hallway of office,622,24.88,crop,57.2,0.0794,1,1,5.59,0.662,320.0
+Workers walking in hallway of office,623,24.92,crop,123.9,0.1721,1,1,2.58,0.966,320.0
+Workers walking in hallway of office,623,24.92,crop,56.6,0.0786,1,1,5.66,0.492,320.0
+Workers walking in hallway of office,624,24.96,crop,123.9,0.1721,1,1,2.58,0.962,320.0
+Workers walking in hallway of office,624,24.96,crop,55.9,0.0776,1,1,5.73,0.464,320.0
+Workers walking in hallway of office,625,25.0,crop,123.3,0.1713,1,1,2.59,0.964,320.0
+Workers walking in hallway of office,625,25.0,crop,55.3,0.0769,1,1,5.78,0.474,320.0
+Workers walking in hallway of office,626,25.04,crop,122.6,0.1703,1,1,2.61,0.966,320.0
+Workers walking in hallway of office,626,25.04,crop,55.6,0.0772,1,1,5.76,0.485,320.0
+Workers walking in hallway of office,627,25.08,crop,124.7,0.1732,1,1,2.57,0.969,320.0
+Workers walking in hallway of office,627,25.08,crop,55.0,0.0764,1,1,5.82,0.49,320.0
+Workers walking in hallway of office,628,25.12,crop,125.9,0.1749,1,1,2.54,0.969,320.0
+Workers walking in hallway of office,628,25.12,crop,54.4,0.0755,1,1,5.88,0.701,320.0
+Workers walking in hallway of office,629,25.16,crop,127.5,0.1772,1,1,2.51,0.981,320.0
+Workers walking in hallway of office,629,25.16,crop,54.0,0.075,1,1,5.93,0.469,320.0
+Workers walking in hallway of office,630,25.2,crop,127.5,0.1771,1,1,2.51,0.985,320.0
+Workers walking in hallway of office,630,25.2,crop,57.3,0.0795,0,1,5.59,,320.0
+Workers walking in hallway of office,631,25.24,crop,127.7,0.1774,1,1,2.51,0.983,320.0
+Workers walking in hallway of office,631,25.24,crop,57.8,0.0802,1,1,5.54,0.485,320.0
+Workers walking in hallway of office,632,25.28,crop,128.7,0.1787,1,1,2.49,0.982,320.0
+Workers walking in hallway of office,632,25.28,crop,57.3,0.0796,0,1,5.58,,320.0
+Workers walking in hallway of office,633,25.32,crop,127.8,0.1776,1,1,2.5,0.982,320.0
+Workers walking in hallway of office,633,25.32,crop,56.6,0.0786,0,1,5.65,,320.0
+Workers walking in hallway of office,634,25.36,crop,128.5,0.1785,1,1,2.49,0.981,320.0
+Workers walking in hallway of office,634,25.36,crop,57.1,0.0793,0,1,5.6,,320.0
+Workers walking in hallway of office,635,25.4,crop,127.9,0.1777,1,1,2.5,0.978,320.0
+Workers walking in hallway of office,635,25.4,crop,61.9,0.0859,1,1,5.17,0.466,320.0
+Workers walking in hallway of office,636,25.44,crop,128.1,0.1779,1,1,2.5,0.98,320.0
+Workers walking in hallway of office,636,25.44,crop,76.8,0.1067,1,1,4.17,0.833,320.0
+Workers walking in hallway of office,637,25.48,crop,129.2,0.1794,1,1,2.48,0.972,320.0
+Workers walking in hallway of office,637,25.48,crop,86.5,0.1202,1,1,3.7,0.827,320.0
+Workers walking in hallway of office,638,25.52,crop,130.8,0.1817,1,1,2.45,0.964,320.0
+Workers walking in hallway of office,638,25.52,crop,90.4,0.1256,1,1,3.54,0.833,320.0
+Workers walking in hallway of office,639,25.56,crop,130.7,0.1815,1,1,2.45,0.971,320.0
+Workers walking in hallway of office,639,25.56,crop,85.8,0.1192,0,1,3.73,,320.0
+Workers walking in hallway of office,640,25.6,crop,134.6,0.187,1,1,2.38,0.968,320.0
+Workers walking in hallway of office,640,25.6,crop,81.9,0.1138,0,1,3.91,,320.0
+Workers walking in hallway of office,641,25.64,crop,135.7,0.1885,1,1,2.36,0.971,320.0
+Workers walking in hallway of office,641,25.64,crop,79.0,0.1098,0,1,4.05,,320.0
+Workers walking in hallway of office,642,25.68,crop,137.8,0.1914,1,1,2.32,0.984,320.0
+Workers walking in hallway of office,642,25.68,crop,77.7,0.108,0,1,4.12,,320.0
+Workers walking in hallway of office,643,25.72,crop,138.9,0.1929,1,1,2.3,0.985,320.0
+Workers walking in hallway of office,643,25.72,crop,78.4,0.1089,0,1,4.08,,320.0
+Workers walking in hallway of office,644,25.76,crop,140.2,0.1947,1,1,2.28,0.986,320.0
+Workers walking in hallway of office,644,25.76,crop,77.9,0.1082,1,1,4.11,0.82,320.0
+Workers walking in hallway of office,645,25.8,crop,139.8,0.1942,1,1,2.29,0.981,320.0
+Workers walking in hallway of office,645,25.8,crop,77.4,0.1075,1,1,4.13,0.818,320.0
+Workers walking in hallway of office,646,25.84,crop,137.7,0.1912,1,1,2.32,0.975,320.0
+Workers walking in hallway of office,646,25.84,crop,77.4,0.1075,1,1,4.14,0.794,320.0
+Workers walking in hallway of office,647,25.88,crop,137.8,0.1914,1,1,2.32,0.973,320.0
+Workers walking in hallway of office,647,25.88,crop,77.1,0.1071,1,1,4.15,0.867,320.0
+Workers walking in hallway of office,648,25.92,crop,141.8,0.197,1,1,2.26,0.961,320.0
+Workers walking in hallway of office,648,25.92,crop,75.8,0.1053,1,1,4.22,0.865,320.0
+Workers walking in hallway of office,649,25.96,crop,143.8,0.1997,1,1,2.23,0.967,320.0
+Workers walking in hallway of office,649,25.96,crop,79.4,0.1102,1,1,4.03,0.755,320.0
+Workers walking in hallway of office,650,26.0,crop,143.5,0.1993,1,1,2.23,0.967,320.0
+Workers walking in hallway of office,650,26.0,crop,81.8,0.1136,1,1,3.91,0.732,320.0
+Workers walking in hallway of office,651,26.04,crop,142.9,0.1985,1,1,2.24,0.965,320.0
+Workers walking in hallway of office,651,26.04,crop,86.1,0.1196,1,1,3.72,0.796,320.0
+Workers walking in hallway of office,652,26.08,crop,142.8,0.1983,1,1,2.24,0.955,320.0
+Workers walking in hallway of office,652,26.08,crop,86.9,0.1207,1,1,3.68,0.737,320.0
+Workers walking in hallway of office,653,26.12,crop,142.1,0.1974,1,1,2.25,0.963,320.0
+Workers walking in hallway of office,653,26.12,crop,88.2,0.1225,1,1,3.63,0.717,320.0
+Workers walking in hallway of office,654,26.16,crop,142.9,0.1985,1,1,2.24,0.981,320.0
+Workers walking in hallway of office,654,26.16,crop,87.7,0.1218,1,1,3.65,0.777,320.0
+Workers walking in hallway of office,655,26.2,crop,144.9,0.2012,1,1,2.21,0.98,320.0
+Workers walking in hallway of office,655,26.2,crop,87.9,0.1221,1,1,3.64,0.811,320.0
+Workers walking in hallway of office,656,26.24,crop,149.1,0.207,1,1,2.15,0.982,320.0
+Workers walking in hallway of office,656,26.24,crop,87.3,0.1212,1,1,3.67,0.812,320.0
+Workers walking in hallway of office,657,26.28,crop,153.1,0.2127,1,1,2.09,0.975,320.0
+Workers walking in hallway of office,657,26.28,crop,89.3,0.124,1,1,3.58,0.855,320.0
+Workers walking in hallway of office,658,26.32,crop,152.9,0.2123,1,1,2.09,0.975,320.0
+Workers walking in hallway of office,658,26.32,crop,88.8,0.1233,1,1,3.6,0.912,320.0
+Workers walking in hallway of office,659,26.36,crop,151.6,0.2106,1,1,2.11,0.978,320.0
+Workers walking in hallway of office,659,26.36,crop,88.9,0.1235,1,1,3.6,0.91,320.0
+Workers walking in hallway of office,660,26.4,crop,155.0,0.2153,1,1,2.06,0.975,320.0
+Workers walking in hallway of office,660,26.4,crop,86.5,0.1201,1,1,3.7,0.871,320.0
+Workers walking in hallway of office,661,26.44,crop,154.9,0.2151,1,1,2.07,0.964,320.0
+Workers walking in hallway of office,661,26.44,crop,85.8,0.1191,1,1,3.73,0.868,320.0
+Workers walking in hallway of office,662,26.48,crop,155.9,0.2165,1,1,2.05,0.973,320.0
+Workers walking in hallway of office,662,26.48,crop,85.0,0.1181,1,1,3.76,0.928,320.0
+Workers walking in hallway of office,663,26.52,crop,158.0,0.2195,1,1,2.02,0.973,320.0
+Workers walking in hallway of office,663,26.52,crop,83.6,0.1161,1,1,3.83,0.916,320.0
+Workers walking in hallway of office,664,26.56,crop,157.7,0.2191,1,1,2.03,0.968,320.0
+Workers walking in hallway of office,664,26.56,crop,84.2,0.1169,1,1,3.8,0.845,320.0
+Workers walking in hallway of office,665,26.6,crop,156.3,0.2171,1,1,2.05,0.976,320.0
+Workers walking in hallway of office,665,26.6,crop,84.0,0.1167,1,1,3.81,0.864,320.0
+Workers walking in hallway of office,666,26.64,crop,157.4,0.2187,1,1,2.03,0.975,320.0
+Workers walking in hallway of office,666,26.64,crop,83.7,0.1163,1,1,3.82,0.898,320.0
+Workers walking in hallway of office,667,26.68,crop,160.7,0.2231,1,1,1.99,0.989,320.0
+Workers walking in hallway of office,667,26.68,crop,83.6,0.1161,1,1,3.83,0.912,320.0
+Workers walking in hallway of office,668,26.72,crop,161.5,0.2244,1,0,1.98,0.982,320.0
+Workers walking in hallway of office,668,26.72,crop,83.9,0.1165,1,0,3.81,0.956,320.0
+Workers walking in hallway of office,669,26.76,crop,163.8,0.2276,1,0,1.95,0.983,320.0
+Workers walking in hallway of office,669,26.76,crop,85.0,0.1181,1,0,3.76,0.929,320.0
+Workers walking in hallway of office,670,26.8,crop,166.7,0.2315,1,0,1.92,0.98,320.0
+Workers walking in hallway of office,670,26.8,crop,85.0,0.1181,1,0,3.76,0.882,320.0
+Workers walking in hallway of office,671,26.84,crop,166.5,0.2313,1,1,1.92,0.98,320.0
+Workers walking in hallway of office,671,26.84,crop,85.5,0.1187,1,1,3.74,0.952,320.0
+Workers walking in hallway of office,672,26.88,crop,168.7,0.2343,1,0,1.9,0.978,320.0
+Workers walking in hallway of office,672,26.88,crop,85.9,0.1193,1,0,3.72,0.905,320.0
+Workers walking in hallway of office,673,26.92,crop,172.2,0.2391,1,0,1.86,0.973,320.0
+Workers walking in hallway of office,673,26.92,crop,88.7,0.1231,1,0,3.61,0.865,320.0
+Workers walking in hallway of office,674,26.96,crop,174.0,0.2417,1,0,1.84,0.952,320.0
+Workers walking in hallway of office,674,26.96,crop,89.6,0.1245,1,0,3.57,0.613,320.0
+Workers walking in hallway of office,675,27.0,crop,175.3,0.2434,1,1,1.83,0.959,320.0
+Workers walking in hallway of office,675,27.0,crop,92.5,0.1284,0,1,3.46,,320.0
+Workers walking in hallway of office,676,27.04,crop,174.2,0.242,1,1,1.84,0.97,320.0
+Workers walking in hallway of office,676,27.04,crop,93.8,0.1303,0,1,3.41,,320.0
+Workers walking in hallway of office,677,27.08,crop,172.8,0.24,1,1,1.85,0.966,320.0
+Workers walking in hallway of office,677,27.08,crop,93.9,0.1305,0,1,3.41,,320.0
+Workers walking in hallway of office,678,27.12,crop,172.7,0.2399,1,1,1.85,0.98,320.0
+Workers walking in hallway of office,678,27.12,crop,93.5,0.1299,1,1,3.42,0.909,320.0
+Workers walking in hallway of office,679,27.16,crop,173.1,0.2404,1,1,1.85,0.98,320.0
+Workers walking in hallway of office,679,27.16,crop,92.8,0.1289,1,1,3.45,0.925,320.0
+Workers walking in hallway of office,680,27.2,crop,175.3,0.2434,1,1,1.83,0.982,320.0
+Workers walking in hallway of office,680,27.2,crop,93.0,0.1291,1,1,3.44,0.92,320.0
+Workers walking in hallway of office,681,27.24,crop,179.9,0.2498,1,1,1.78,0.983,320.0
+Workers walking in hallway of office,681,27.24,crop,93.6,0.13,1,1,3.42,0.918,320.0
+Workers walking in hallway of office,682,27.28,crop,183.2,0.2544,1,1,1.75,0.978,320.0
+Workers walking in hallway of office,682,27.28,crop,95.5,0.1326,1,1,3.35,0.907,320.0
+Workers walking in hallway of office,683,27.32,crop,180.8,0.2511,1,1,1.77,0.975,320.0
+Workers walking in hallway of office,683,27.32,crop,96.4,0.134,1,1,3.32,0.926,320.0
+Workers walking in hallway of office,684,27.36,crop,180.4,0.2505,1,1,1.77,0.976,320.0
+Workers walking in hallway of office,684,27.36,crop,97.5,0.1355,1,1,3.28,0.917,320.0
+Workers walking in hallway of office,685,27.4,crop,188.8,0.2623,1,0,1.69,0.975,320.0
+Workers walking in hallway of office,685,27.4,crop,97.4,0.1353,1,0,3.29,0.923,320.0
+Workers walking in hallway of office,686,27.44,crop,190.8,0.2651,1,0,1.68,0.98,320.0
+Workers walking in hallway of office,686,27.44,crop,97.0,0.1347,1,0,3.3,0.941,320.0
+Workers walking in hallway of office,687,27.48,crop,192.5,0.2674,1,0,1.66,0.974,320.0
+Workers walking in hallway of office,687,27.48,crop,95.6,0.1328,1,0,3.35,0.96,320.0
+Workers walking in hallway of office,688,27.52,crop,193.4,0.2686,1,0,1.65,0.964,320.0
+Workers walking in hallway of office,688,27.52,crop,94.8,0.1316,1,0,3.38,0.957,320.0
+Workers walking in hallway of office,689,27.56,crop,195.1,0.2709,1,0,1.64,0.962,320.0
+Workers walking in hallway of office,689,27.56,crop,94.2,0.1308,1,0,3.4,0.942,320.0
+Workers walking in hallway of office,690,27.6,crop,196.2,0.2725,1,0,1.63,0.975,320.0
+Workers walking in hallway of office,690,27.6,crop,92.7,0.1288,1,0,3.45,0.966,320.0
+Workers walking in hallway of office,691,27.64,crop,195.3,0.2713,1,0,1.64,0.966,320.0
+Workers walking in hallway of office,691,27.64,crop,92.6,0.1286,1,0,3.46,0.946,320.0
+Workers walking in hallway of office,692,27.68,crop,195.6,0.2717,1,0,1.64,0.98,320.0
+Workers walking in hallway of office,692,27.68,crop,91.8,0.1275,1,0,3.49,0.953,320.0
+Workers walking in hallway of office,693,27.72,crop,199.5,0.2771,1,0,1.6,0.982,320.0
+Workers walking in hallway of office,693,27.72,crop,92.9,0.129,1,0,3.44,0.95,320.0
+Workers walking in hallway of office,694,27.76,crop,206.0,0.2862,1,0,1.55,0.977,320.0
+Workers walking in hallway of office,694,27.76,crop,93.0,0.1291,1,0,3.44,0.946,320.0
+Workers walking in hallway of office,695,27.8,crop,207.8,0.2886,1,0,1.54,0.983,320.0
+Workers walking in hallway of office,695,27.8,crop,97.1,0.1348,1,0,3.3,0.911,320.0
+Workers walking in hallway of office,696,27.84,crop,207.0,0.2874,1,0,1.55,0.984,320.0
+Workers walking in hallway of office,696,27.84,crop,98.2,0.1363,1,0,3.26,0.916,320.0
+Workers walking in hallway of office,697,27.88,crop,209.2,0.2906,1,0,1.53,0.978,320.0
+Workers walking in hallway of office,697,27.88,crop,98.4,0.1367,1,0,3.25,0.925,320.0
+Workers walking in hallway of office,698,27.92,crop,216.6,0.3009,1,0,1.48,0.97,320.0
+Workers walking in hallway of office,698,27.92,crop,102.3,0.1421,1,0,3.13,0.865,320.0
+Workers walking in hallway of office,699,27.96,crop,217.3,0.3019,1,0,1.47,0.973,320.0
+Workers walking in hallway of office,699,27.96,crop,101.9,0.1415,1,0,3.14,0.849,320.0
+Workers walking in hallway of office,700,28.0,crop,217.0,0.3014,1,0,1.47,0.97,320.0
+Workers walking in hallway of office,700,28.0,crop,101.2,0.1406,1,0,3.16,0.858,320.0
+Workers walking in hallway of office,701,28.04,crop,217.0,0.3014,1,0,1.47,0.969,320.0
+Workers walking in hallway of office,701,28.04,crop,102.4,0.1423,1,0,3.12,0.849,320.0
+Workers walking in hallway of office,702,28.08,crop,216.9,0.3012,1,0,1.48,0.972,320.0
+Workers walking in hallway of office,702,28.08,crop,101.1,0.1404,1,0,3.17,0.933,320.0
+Workers walking in hallway of office,703,28.12,crop,217.2,0.3017,1,0,1.47,0.971,320.0
+Workers walking in hallway of office,703,28.12,crop,98.7,0.1371,1,0,3.24,0.937,320.0
+Workers walking in hallway of office,704,28.16,crop,216.9,0.3013,1,0,1.48,0.981,320.0
+Workers walking in hallway of office,704,28.16,crop,98.7,0.137,1,0,3.24,0.903,320.0
+Workers walking in hallway of office,705,28.2,crop,217.5,0.3021,1,0,1.47,0.985,320.0
+Workers walking in hallway of office,705,28.2,crop,100.9,0.1401,1,0,3.17,0.895,320.0
+Workers walking in hallway of office,706,28.24,crop,223.9,0.311,1,0,1.43,0.986,320.0
+Workers walking in hallway of office,706,28.24,crop,103.1,0.1431,1,0,3.11,0.933,320.0
+Workers walking in hallway of office,707,28.28,crop,234.5,0.3257,1,0,1.36,0.978,320.0
+Workers walking in hallway of office,707,28.28,crop,104.3,0.1449,1,0,3.07,0.927,320.0
+Workers walking in hallway of office,708,28.32,crop,234.5,0.3258,1,0,1.36,0.97,320.0
+Workers walking in hallway of office,708,28.32,crop,103.5,0.1438,1,0,3.09,0.928,320.0
+Workers walking in hallway of office,709,28.36,crop,233.7,0.3246,1,0,1.37,0.978,320.0
+Workers walking in hallway of office,709,28.36,crop,103.6,0.1438,1,0,3.09,0.916,320.0
+Workers walking in hallway of office,710,28.4,crop,235.6,0.3272,1,0,1.36,0.966,320.0
+Workers walking in hallway of office,710,28.4,crop,102.8,0.1428,1,0,3.11,0.926,320.0
+Workers walking in hallway of office,711,28.44,crop,241.2,0.335,1,0,1.33,0.957,320.0
+Workers walking in hallway of office,711,28.44,crop,105.0,0.1458,1,0,3.05,0.932,320.0
+Workers walking in hallway of office,712,28.48,crop,243.5,0.3382,1,0,1.31,0.962,320.0
+Workers walking in hallway of office,712,28.48,crop,105.6,0.1467,1,0,3.03,0.926,320.0
+Workers walking in hallway of office,713,28.52,crop,243.0,0.3375,1,0,1.32,0.97,320.0
+Workers walking in hallway of office,713,28.52,crop,105.4,0.1464,1,0,3.03,0.941,320.0
+Workers walking in hallway of office,714,28.56,crop,243.1,0.3376,1,0,1.32,0.961,320.0
+Workers walking in hallway of office,714,28.56,crop,104.2,0.1447,1,0,3.07,0.552,320.0
+Workers walking in hallway of office,715,28.6,crop,243.8,0.3385,1,0,1.31,0.967,320.0
+Workers walking in hallway of office,715,28.6,crop,102.9,0.1429,1,0,3.11,0.579,320.0
+Workers walking in hallway of office,716,28.64,crop,243.2,0.3378,1,0,1.32,0.972,320.0
+Workers walking in hallway of office,716,28.64,crop,101.6,0.141,1,0,3.15,0.448,320.0
+Workers walking in hallway of office,717,28.68,crop,243.4,0.338,1,0,1.31,0.982,320.0
+Workers walking in hallway of office,717,28.68,crop,101.5,0.141,1,0,3.15,0.454,320.0
+Workers walking in hallway of office,718,28.72,crop,248.2,0.3447,1,0,1.29,0.987,320.0
+Workers walking in hallway of office,718,28.72,crop,101.7,0.1412,1,0,3.15,0.458,320.0
+Workers walking in hallway of office,719,28.76,crop,253.4,0.352,1,0,1.26,0.989,320.0
+Workers walking in hallway of office,719,28.76,crop,104.0,0.1445,1,0,3.08,0.486,320.0
+Workers walking in hallway of office,720,28.8,crop,262.6,0.3647,1,0,1.22,0.989,320.0
+Workers walking in hallway of office,720,28.8,crop,101.2,0.1406,1,0,3.16,0.775,320.0
+Workers walking in hallway of office,721,28.84,crop,264.2,0.3669,1,0,1.21,0.981,320.0
+Workers walking in hallway of office,721,28.84,crop,102.5,0.1423,1,0,3.12,0.868,320.0
+Workers walking in hallway of office,722,28.88,crop,263.3,0.3657,1,0,1.22,0.975,320.0
+Workers walking in hallway of office,722,28.88,crop,110.3,0.1531,1,0,2.9,0.799,320.0
+Workers walking in hallway of office,723,28.92,crop,269.1,0.3737,1,0,1.19,0.971,320.0
+Workers walking in hallway of office,723,28.92,crop,112.5,0.1562,1,0,2.85,0.716,320.0
+Workers walking in hallway of office,724,28.96,crop,275.0,0.3819,1,0,1.16,0.967,320.0
+Workers walking in hallway of office,724,28.96,crop,115.7,0.1606,1,0,2.77,0.715,320.0
+Workers walking in hallway of office,725,29.0,crop,273.3,0.3795,1,0,1.17,0.964,320.0
+Workers walking in hallway of office,725,29.0,crop,119.9,0.1665,1,0,2.67,0.778,320.0
+Workers walking in hallway of office,726,29.04,crop,274.1,0.3808,1,0,1.17,0.972,320.0
+Workers walking in hallway of office,726,29.04,crop,120.2,0.1669,1,0,2.66,0.865,320.0
+Workers walking in hallway of office,727,29.08,crop,273.8,0.3803,1,0,1.17,0.98,320.0
+Workers walking in hallway of office,727,29.08,crop,120.1,0.1668,1,0,2.66,0.926,320.0
+Workers walking in hallway of office,728,29.12,crop,274.3,0.381,1,0,1.17,0.982,320.0
+Workers walking in hallway of office,728,29.12,crop,119.9,0.1665,1,0,2.67,0.941,320.0
+Workers walking in hallway of office,729,29.16,crop,274.2,0.3808,1,0,1.17,0.982,320.0
+Workers walking in hallway of office,729,29.16,crop,121.5,0.1687,1,0,2.63,0.955,320.0
+Workers walking in hallway of office,730,29.2,crop,278.4,0.3867,1,0,1.15,0.979,320.0
+Workers walking in hallway of office,730,29.2,crop,119.1,0.1655,1,0,2.69,0.963,320.0
+Workers walking in hallway of office,731,29.24,crop,290.0,0.4028,1,0,1.1,0.97,320.0
+Workers walking in hallway of office,731,29.24,crop,119.0,0.1653,1,0,2.69,0.972,320.0
+Workers walking in hallway of office,732,29.28,crop,297.2,0.4128,1,0,1.08,0.973,320.0
+Workers walking in hallway of office,732,29.28,crop,123.7,0.1718,1,0,2.59,0.979,320.0
+Workers walking in hallway of office,733,29.32,crop,297.5,0.4132,1,0,1.08,0.973,320.0
+Workers walking in hallway of office,733,29.32,crop,123.3,0.1713,1,0,2.59,0.976,320.0
+Workers walking in hallway of office,734,29.36,crop,300.5,0.4174,1,0,1.06,0.98,320.0
+Workers walking in hallway of office,734,29.36,crop,132.0,0.1833,1,0,2.42,0.972,320.0
+Workers walking in hallway of office,735,29.4,crop,304.2,0.4226,1,0,1.05,0.976,320.0
+Workers walking in hallway of office,735,29.4,crop,134.2,0.1864,1,0,2.38,0.962,320.0
+Workers walking in hallway of office,736,29.44,crop,304.5,0.4229,1,0,1.05,0.978,320.0
+Workers walking in hallway of office,736,29.44,crop,133.5,0.1855,1,0,2.4,0.971,320.0
+Workers walking in hallway of office,737,29.48,crop,303.8,0.4219,1,0,1.05,0.978,320.0
+Workers walking in hallway of office,737,29.48,crop,128.5,0.1785,1,0,2.49,0.964,320.0
+Workers walking in hallway of office,738,29.52,crop,303.8,0.4219,1,0,1.05,0.948,320.0
+Workers walking in hallway of office,738,29.52,crop,127.3,0.1768,1,0,2.51,0.951,320.0
+Workers walking in hallway of office,739,29.56,crop,301.7,0.419,1,0,1.06,0.926,320.0
+Workers walking in hallway of office,739,29.56,crop,127.7,0.1773,1,0,2.51,0.936,320.0
+Workers walking in hallway of office,740,29.6,crop,303.7,0.4218,1,0,1.05,0.846,320.0
+Workers walking in hallway of office,740,29.6,crop,130.9,0.1818,1,0,2.45,0.951,320.0
+Workers walking in hallway of office,741,29.64,crop,301.1,0.4182,1,0,1.06,0.853,320.0
+Workers walking in hallway of office,741,29.64,crop,132.8,0.1844,1,0,2.41,0.95,320.0
+Workers walking in hallway of office,742,29.68,crop,300.2,0.417,1,0,1.07,0.833,320.0
+Workers walking in hallway of office,742,29.68,crop,132.8,0.1844,1,0,2.41,0.966,320.0
+Workers walking in hallway of office,743,29.72,crop,133.0,0.1847,1,0,2.41,0.968,320.0
+Workers walking in hallway of office,743,29.72,crop,301.3,0.4184,1,0,1.06,0.836,320.0
+Workers walking in hallway of office,744,29.76,crop,295.9,0.4109,1,0,1.08,0.804,320.0
+Workers walking in hallway of office,744,29.76,crop,135.2,0.1877,1,0,2.37,0.966,320.0
+Workers walking in hallway of office,745,29.8,crop,138.2,0.1919,1,0,2.32,0.961,320.0
+Workers walking in hallway of office,745,29.8,crop,291.3,0.4045,1,0,1.1,0.826,320.0
+Workers walking in hallway of office,746,29.84,crop,138.8,0.1927,1,0,2.31,0.969,320.0
+Workers walking in hallway of office,746,29.84,crop,284.2,0.3948,1,0,1.13,0.832,320.0
+Workers walking in hallway of office,747,29.88,crop,141.6,0.1967,1,0,2.26,0.965,320.0
+Workers walking in hallway of office,748,29.92,crop,141.7,0.1969,1,0,2.26,0.974,320.0
+Workers walking in hallway of office,749,29.96,crop,143.7,0.1995,1,0,2.23,0.968,320.0
+Workers walking in hallway of office,750,30.0,crop,143.9,0.1998,1,0,2.22,0.966,320.0
+Workers walking in hallway of office,751,30.04,crop,140.8,0.1956,1,0,2.27,0.955,320.0
+Workers walking in hallway of office,752,30.08,crop,142.0,0.1972,1,0,2.25,0.952,320.0
+Workers walking in hallway of office,753,30.12,crop,145.1,0.2015,1,0,2.21,0.968,320.0
+Workers walking in hallway of office,754,30.16,crop,139.9,0.1943,1,0,2.29,0.971,320.0
+Workers walking in hallway of office,755,30.2,crop,141.0,0.1959,1,0,2.27,0.981,320.0
+Workers walking in hallway of office,756,30.24,crop,150.7,0.2094,1,0,2.12,0.98,320.0
+Workers walking in hallway of office,757,30.28,crop,147.9,0.2054,1,0,2.16,0.98,320.0
+Workers walking in hallway of office,758,30.32,crop,147.2,0.2045,1,0,2.17,0.978,320.0
+Workers walking in hallway of office,759,30.36,crop,148.6,0.2064,1,0,2.15,0.97,320.0
+Workers walking in hallway of office,760,30.4,crop,151.2,0.21,1,0,2.12,0.965,320.0
+Workers walking in hallway of office,761,30.44,crop,147.8,0.2052,1,0,2.17,0.965,320.0
+Workers walking in hallway of office,762,30.48,crop,147.1,0.2043,1,0,2.17,0.923,320.0
+Workers walking in hallway of office,763,30.52,crop,147.2,0.2045,1,0,2.17,0.917,320.0
+Workers walking in hallway of office,764,30.56,crop,151.4,0.2103,1,0,2.11,0.905,320.0
+Workers walking in hallway of office,765,30.6,crop,152.3,0.2115,1,0,2.1,0.939,320.0
+Workers walking in hallway of office,766,30.64,crop,150.1,0.2084,1,0,2.13,0.974,320.0
+Workers walking in hallway of office,767,30.68,crop,151.6,0.2105,1,0,2.11,0.968,320.0
+Workers walking in hallway of office,768,30.72,crop,159.0,0.2208,1,0,2.01,0.969,320.0
+Workers walking in hallway of office,769,30.76,crop,160.7,0.2232,1,0,1.99,0.975,320.0
+Workers walking in hallway of office,770,30.8,crop,165.1,0.2293,1,0,1.94,0.976,320.0
+Workers walking in hallway of office,771,30.84,crop,170.7,0.2371,1,0,1.87,0.975,320.0
+Workers walking in hallway of office,772,30.88,crop,164.2,0.2281,1,0,1.95,0.969,320.0
+Workers walking in hallway of office,773,30.92,crop,166.2,0.2308,1,0,1.93,0.956,320.0
+Workers walking in hallway of office,774,30.96,crop,167.5,0.2326,1,0,1.91,0.952,320.0
+Workers walking in hallway of office,775,31.0,crop,167.0,0.2319,1,0,1.92,0.943,320.0
+Workers walking in hallway of office,776,31.04,crop,168.9,0.2345,1,0,1.9,0.947,320.0
+Workers walking in hallway of office,777,31.08,crop,172.9,0.2401,1,0,1.85,0.983,320.0
+Workers walking in hallway of office,778,31.12,crop,176.1,0.2446,1,0,1.82,0.979,320.0
+Workers walking in hallway of office,779,31.16,crop,180.3,0.2505,1,0,1.77,0.985,320.0
+Workers walking in hallway of office,780,31.2,crop,183.1,0.2542,1,0,1.75,0.981,320.0
+Workers walking in hallway of office,781,31.24,crop,183.5,0.2548,1,0,1.74,0.988,320.0
+Workers walking in hallway of office,782,31.28,crop,184.5,0.2563,1,0,1.73,0.983,320.0
+Workers walking in hallway of office,783,31.32,crop,185.9,0.2582,1,0,1.72,0.98,320.0
+Workers walking in hallway of office,784,31.36,crop,189.0,0.2626,1,0,1.69,0.97,320.0
+Workers walking in hallway of office,785,31.4,crop,191.2,0.2655,1,0,1.67,0.939,320.0
+Workers walking in hallway of office,786,31.44,crop,192.2,0.267,1,0,1.66,0.913,320.0
+Workers walking in hallway of office,787,31.48,crop,190.5,0.2645,1,0,1.68,0.899,320.0
+Workers walking in hallway of office,788,31.52,crop,191.0,0.2653,1,0,1.68,0.894,320.0
+Workers walking in hallway of office,789,31.56,crop,192.0,0.2667,1,0,1.67,0.967,320.0
+Workers walking in hallway of office,790,31.6,crop,189.0,0.2625,1,0,1.69,0.964,320.0
+Workers walking in hallway of office,791,31.64,crop,201.5,0.2799,1,0,1.59,0.965,320.0
+Workers walking in hallway of office,792,31.68,crop,215.3,0.299,1,0,1.49,0.975,320.0
+Workers walking in hallway of office,793,31.72,crop,214.1,0.2974,1,0,1.49,0.943,320.0
+Workers walking in hallway of office,794,31.76,crop,214.4,0.2978,1,0,1.49,0.939,320.0
+Workers walking in hallway of office,795,31.8,crop,223.1,0.3099,1,0,1.43,0.945,320.0
+Workers walking in hallway of office,796,31.84,crop,221.3,0.3074,1,0,1.45,0.944,320.0
+Workers walking in hallway of office,797,31.88,crop,221.3,0.3074,1,0,1.45,0.93,320.0
+Workers walking in hallway of office,798,31.92,crop,221.3,0.3074,1,0,1.45,0.948,320.0
+Workers walking in hallway of office,799,31.96,crop,220.4,0.3061,1,0,1.45,0.951,320.0
+Workers walking in hallway of office,800,32.0,crop,220.2,0.3058,1,0,1.45,0.961,320.0
+Workers walking in hallway of office,801,32.04,crop,221.6,0.3078,1,0,1.44,0.976,320.0
+Workers walking in hallway of office,802,32.08,crop,227.5,0.3159,1,0,1.41,0.982,320.0
+Workers walking in hallway of office,803,32.12,crop,228.4,0.3173,1,0,1.4,0.982,320.0
+Workers walking in hallway of office,804,32.16,crop,228.3,0.3171,1,0,1.4,0.975,320.0
+Workers walking in hallway of office,805,32.2,crop,225.3,0.3129,1,0,1.42,0.975,320.0
+Workers walking in hallway of office,806,32.24,crop,242.9,0.3374,1,0,1.32,0.963,320.0
+Workers walking in hallway of office,807,32.28,crop,242.1,0.3362,1,0,1.32,0.967,320.0
+Workers walking in hallway of office,808,32.32,crop,250.8,0.3483,1,0,1.28,0.957,320.0
+Workers walking in hallway of office,809,32.36,crop,248.5,0.3451,1,0,1.29,0.901,320.0
+Workers walking in hallway of office,810,32.4,crop,247.1,0.3431,1,0,1.3,0.919,320.0
+Workers walking in hallway of office,811,32.44,crop,246.9,0.3429,1,0,1.3,0.897,320.0
+Workers walking in hallway of office,812,32.48,crop,249.3,0.3462,1,0,1.28,0.946,320.0
+Workers walking in hallway of office,813,32.52,crop,255.5,0.3548,1,0,1.25,0.969,320.0
+Workers walking in hallway of office,814,32.56,crop,263.3,0.3657,1,0,1.22,0.975,320.0
+Workers walking in hallway of office,815,32.6,crop,283.5,0.3938,1,0,1.13,0.967,320.0
+Workers walking in hallway of office,816,32.64,crop,284.2,0.3948,1,0,1.13,0.936,320.0
+Workers walking in hallway of office,817,32.68,crop,291.7,0.4051,1,0,1.1,0.9,320.0
+Workers walking in hallway of office,818,32.72,crop,292.5,0.4062,1,0,1.09,0.895,320.0
+Workers walking in hallway of office,819,32.76,crop,299.5,0.416,1,0,1.07,0.859,320.0
+Workers walking in hallway of office,820,32.8,crop,302.8,0.4206,1,0,1.06,0.881,320.0
+Workers walking in hallway of office,821,32.84,crop,304.1,0.4224,1,0,1.05,0.922,320.0
+Workers walking in hallway of office,822,32.88,crop,301.9,0.4193,1,0,1.06,0.925,320.0
+Workers walking in hallway of office,823,32.92,crop,305.9,0.4248,1,0,1.05,0.95,320.0
+Workers walking in hallway of office,824,32.96,crop,300.9,0.4179,1,0,1.06,0.937,320.0
+Workers walking in hallway of office,825,33.0,crop,304.1,0.4224,1,0,1.05,0.97,320.0
+Workers walking in hallway of office,826,33.04,crop,312.4,0.4339,1,0,1.02,0.982,320.0
+Workers walking in hallway of office,827,33.08,crop,326.3,0.4532,1,0,1.0,0.978,326.3
+Workers walking in hallway of office,828,33.12,crop,334.1,0.4641,1,0,1.0,0.964,334.1
+Workers walking in hallway of office,829,33.16,crop,354.9,0.493,1,0,1.0,0.957,354.9
+Workers walking in hallway of office,830,33.2,crop,349.5,0.4855,1,0,1.0,0.952,349.5
+Workers walking in hallway of office,831,33.24,crop,365.0,0.507,1,0,1.0,0.961,365.0
+Workers walking in hallway of office,832,33.28,crop,366.5,0.509,1,0,1.0,0.916,366.5
+Workers walking in hallway of office,833,33.32,crop,362.0,0.5027,1,0,1.0,0.906,362.0
+Workers walking in hallway of office,834,33.36,crop,356.8,0.4956,1,0,1.0,0.91,356.8
+Workers walking in hallway of office,835,33.4,crop,351.1,0.4877,1,0,1.0,0.904,351.1
+Workers walking in hallway of office,836,33.44,crop,358.1,0.4974,1,0,1.0,0.886,358.1
+Workers walking in hallway of office,837,33.48,crop,349.9,0.4859,1,0,1.0,0.924,349.9
+Workers walking in hallway of office,838,33.52,crop,343.4,0.4769,1,0,1.0,0.941,343.4
+Workers walking in hallway of office,839,33.56,crop,360.5,0.5007,1,0,1.0,0.898,360.5
+Workers walking in hallway of office,840,33.6,crop,366.4,0.5088,1,0,1.0,0.797,366.4
+Workers walking in hallway of office,841,33.64,crop,362.4,0.5034,1,0,1.0,0.709,362.4
+Workers walking in hallway of office,842,33.68,crop,356.3,0.4949,1,0,1.0,0.654,356.3
+Workers walking in hallway of office,843,33.72,crop,350.9,0.4873,1,0,1.0,0.634,350.9
+Workers walking in hallway of office,844,33.76,crop,347.9,0.4832,1,0,1.0,0.674,347.9
+Workers walking in hallway of office,845,33.8,crop,341.6,0.4745,1,0,1.0,0.623,341.6
+Workers walking in hallway of office,846,33.84,crop,337.1,0.4682,1,0,1.0,0.723,337.1
+Workers walking in hallway of office,847,33.88,crop,336.6,0.4675,1,0,1.0,0.629,336.6
+Workers walking in hallway of office,848,33.92,crop,336.7,0.4676,1,0,1.0,0.667,336.7
+Workers walking in hallway of office,849,33.96,crop,335.4,0.4658,1,0,1.0,0.716,335.4
+Workers walking in hallway of office,850,34.0,crop,333.6,0.4634,1,0,1.0,0.756,333.6
+Workers walking in hallway of office,851,34.04,crop,330.7,0.4594,1,0,1.0,0.741,330.7
+Workers walking in hallway of office,852,34.08,crop,325.9,0.4526,1,0,1.0,0.741,325.9
+Workers walking in hallway of office,853,34.12,crop,321.2,0.4461,1,0,1.0,0.71,321.2
+Workers walking in hallway of office,854,34.16,crop,317.9,0.4416,1,0,1.01,0.697,320.0
+Workers walking in hallway of office,855,34.2,crop,316.0,0.4389,1,0,1.01,0.772,320.0
+Workers walking in hallway of office,856,34.24,crop,320.1,0.4446,1,0,1.0,0.649,320.1
+Workers walking in hallway of office,857,34.28,crop,325.9,0.4526,1,0,1.0,0.51,325.9
+Workers walking in hallway of office,858,34.32,crop,326.4,0.4533,1,0,1.0,0.532,326.4
+Workers walking in hallway of office,859,34.36,crop,330.4,0.4589,1,0,1.0,0.516,330.4
+Workers walking in hallway of office,860,34.4,crop,337.5,0.4687,1,0,1.0,0.606,337.5
+Workers walking in hallway of office,861,34.44,crop,340.8,0.4733,1,0,1.0,0.53,340.8
+Workers walking in hallway of office,862,34.48,crop,354.7,0.4926,1,0,1.0,0.494,354.7
+Workers walking in hallway of office,863,34.52,crop,362.0,0.5028,0,0,1.0,,362.0
+Workers walking in hallway of office,864,34.56,crop,366.3,0.5088,1,0,1.0,0.7,366.3
+Workers walking in hallway of office,865,34.6,crop,361.9,0.5026,1,0,1.0,0.674,361.9
+Workers walking in hallway of office,866,34.64,crop,346.3,0.4809,1,0,1.0,0.697,346.3
+Workers walking in hallway of office,867,34.68,crop,326.3,0.4532,1,0,1.0,0.652,326.3
+Workers walking in hallway of office,868,34.72,crop,297.5,0.4132,1,0,1.08,0.493,320.0
+Workers walking in hallway of office,869,34.76,crop,273.0,0.3792,0,0,1.17,,320.0
+Workers walking in hallway of office,870,34.8,crop,235.5,0.327,1,0,1.36,0.469,320.0
+Workers walking in hallway of office,873,34.92,crop,171.4,0.2381,0,0,1.87,,320.0
